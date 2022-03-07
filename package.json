@@ -1,12 +1,12 @@
 {
   "name": "vscode-eslint-prettier-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vscode eslint prettier",
   "main": "src/main.js",
   "repository": {
-		"type": "git",
-		"url": "https://gitee.com/japlus/vscode-eslint-prettier-helper"
-	},
+    "type": "git",
+    "url": "https://gitee.com/japlus/vscode-eslint-prettier-helper"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +14,11 @@
     "vscode-eslint-prettier-helper": "./src/main.js"
   },
   "author": "JA+",
-  "contributors":[{"name":"JA+"}],
+  "contributors": [
+    {
+      "name": "JA+"
+    }
+  ],
   "license": "ISC",
   "devDependencies": {},
   "peerDependencies": {}

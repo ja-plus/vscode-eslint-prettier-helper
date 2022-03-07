@@ -12,11 +12,8 @@ const filePath = path.join(
   os.homedir(),
   'AppData/Roaming/Code/User/settings.json'
 );
-console.log(filePath);
-console.log('vscode settings.json add configuration:');
-console.log(`"editor.codeActionsOnSave": {
-  "source.fixAll.eslint": true
-}`);
+console.log('\n', filePath);
+console.log('vscode settings.json add configuration...');
 try {
   const data = fs.readFileSync(filePath);
   let settingsStr = data.toString();
@@ -25,12 +22,13 @@ try {
     return str.replace(',', '');
   });
   const settingsObj = JSON.parse(settingsStr) || {};
-  if (!settingsObj['editor.codeActionsOnSave'])
+  if (!settingsObj['editor.codeActionsOnSave']){
     settingsObj['editor.codeActionsOnSave'] = {};
+  }
   settingsObj['editor.codeActionsOnSave']['source.fixAll.eslint'] = true;
   fs.writeFile(filePath, JSON.stringify(settingsObj, null, 2), (err) => {
     if (err) console.error(err);
-    console.log('settings.json updated');
+    console.log('√ settings.json updated');
   });
 } catch (err) {
   console.error(err);

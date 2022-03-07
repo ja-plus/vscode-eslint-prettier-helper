@@ -1,15 +1,20 @@
 # vscode-eslint-prettier-helper
-* install vscode eslint plugin
-* npm install eslint prettier packages
-* add .eslintignore .eslintrc.js .prettier.js
-* set vscode settings.json.(do eslint --fix when save file) 
-## Will installing npm packages
+## What will do
+* Install vscode eslint plugin
+* Npm install eslint prettier packages
+* Add .eslintignore .eslintrc.js .prettier.js
+* Set vscode settings.json.(do eslint --fix when save file) 
+### Installed npm packages versions
 > "eslint": "8.1.0",  
 > "eslint-config-prettier": "8.4.0",  
 > "eslint-plugin-html": "6.2.0",  
 > "eslint-plugin-prettier": "4.0.0",  
 > "eslint-plugin-vue": "8.5.0",  
 > "prettier": "2.5.1"  
+### Add this config to vscode settings.json
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
 ## Installation & Use
 > npm i vscode-eslint-prettier-helper  
 > npx i vscode-eslint-prettier-helper

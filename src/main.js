@@ -22,24 +22,30 @@ if (installedEslintExt) {
   console.log('Installed vscdoe eslint plugin:', installedEslintExt);
   const eslintExtVersion = installedEslintExt.split('@')[1];
   if (eslintExtVersion < '2.2.0') {
-    console.log('已安装的eslint 插件版本过低:' + installedEslintExt);
-    console.log('Installing vscode eslint plugin 2.2.3');
-    childProcess.exec(
-      'code --install-extension ' +
-        path.resolve(
-          __dirname,
-          './vscodeExts/dbaeumer.vscode-eslint-2.2.3.vsix'
-        ),
-      (err, stdout) => {
-        if(err) return console.log('Installation vscode eslint plugin failed: ', err);
-        // console.log(stdout);
-        console.log('Plug-in installation succeeded');
-      }
-    );
+    console.log('Installed ESLint plugin version is too early.' + installedEslintExt);
+    installVscodePlugin();
   }
+}else{
+  installVscodePlugin();
 }
 
-// 复制配置文件到当前目录下
+function installVscodePlugin(){
+  console.log('Installing vscode eslint plugin 2.2.3');
+  childProcess.exec(
+    'code --install-extension ' +
+      path.resolve(
+        __dirname,
+        './vscodeExts/dbaeumer.vscode-eslint-2.2.3.vsix'
+      ),
+    (err, stdout) => {
+      if(err) return console.log('Installation vscode eslint plugin failed: ', err);
+      // console.log(stdout);
+      console.log('√ Vscode eslint plugin installation succeeded');
+    }
+  );
+}
+
+// Copy config files
 const files = fs.readdirSync(path.resolve(__dirname, './configFiles'));
 console.log('Copying config files...', files);
 let promArr = [];
@@ -54,13 +60,13 @@ for (const fileName of files) {
   promArr.push(prom);
 }
 Promise.all(promArr).then(() => {
-  console.log('Copying finished');
+  console.log('√ Copying finished');
 });
 
-// 更新settings.json
+// update settings.json
 childProcess.fork(path.resolve(__dirname, './updateSettings.js'));
 
-// 安装需要的npm包
+// install npm packages
 const eslintPkg = require('./version.json');
 let npmCmd = 'npm i -D';
 for (const pkg in eslintPkg) {
@@ -70,5 +76,6 @@ for (const pkg in eslintPkg) {
 console.log('Installing npm packages...');
 console.log(npmCmd);
 childProcess.exec(npmCmd, (err, stdout) => {
-  console.log('Npm packages installation succeed');
+  if(err) return console.err('Npm install failed', err)
+  console.log('√ Npm packages installation succeed');
 });
