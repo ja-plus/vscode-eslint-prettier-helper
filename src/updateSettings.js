@@ -1,5 +1,5 @@
 /**
- * vscode 的settings.json 中添加
+ * vscode settings.json 
  * "editor.codeActionsOnSave": {
  *   "source.fixAll.eslint": true
  * },
@@ -17,7 +17,7 @@ console.log('Vscode settings.json add configuration...');
 try {
   const data = fs.readFileSync(filePath);
   let settingsStr = data.toString();
-  // 去掉最后一行的逗号（如果有）
+  // Remove the comma from the last line.(if it has)(Make JSON.parse work properly)
   settingsStr = settingsStr.replace(/, *\n? *\}/, (str) => {
     return str.replace(',', '');
   });

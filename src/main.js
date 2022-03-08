@@ -5,12 +5,11 @@ const { promisify } = require('util');
 const childProcess = require('child_process');
 const copyFile = promisify(fs.copyFile);
 
-// 检查vscode版本
+// Check vscode version
 // let vscodeVersion = childProcess.execSync('code --version');
 // vscodeVersion = vscodeVersion.toString();
 // console.log(vscodeVersion);
 
-// 检查vscode中是否安装了eslint
 console.log('Checks whether the VScode ESLint plugin is installed');
 let installedExts = childProcess.execSync(
   'code --list-extensions --show-versions'
