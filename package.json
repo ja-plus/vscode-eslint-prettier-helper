@@ -20,7 +20,7 @@
       "name": "JA+"
     }
   ],
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {},
   "peerDependencies": {}
 }
