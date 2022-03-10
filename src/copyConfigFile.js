@@ -22,7 +22,7 @@ module.exports = function (selectedArr) {
     // add special eslint config
     if (selectedArr.includes('vue')) {
         eslintrc.plugins.push('vue')
-        eslintrc.extends.push('plugin:vue/recommended')
+        eslintrc.extends.splice(eslintrc.extends.length - 1, 0, 'plugin:vue/recommended') // prettier rule cover vue rule
     }
 
     if (selectedArr.includes('ts')) {

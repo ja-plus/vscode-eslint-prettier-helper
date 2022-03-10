@@ -1,3 +1,5 @@
+## 1.1.2
+* fix: eslintrc extends make prettier/recommend is the last one
 ## 1.1.1
 * fix: update vscode setting.json not work 
 ## 1.1.0 

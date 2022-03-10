@@ -4,13 +4,15 @@ const prompt = inquirer.createPromptModule()
 prompt([
     {
         type: 'checkbox',
-        default: '',
+        default: ['js', 'vue'],
         name: 'type',
         message: 'Select env:',
-        choices: ['vue', 'ts'],
+        choices: ['js', 'vue', 'ts'],
     },
 ]).then(answer => {
-    answer.type.unshift('js') // default js
+    if (!answer.type.includes('js')) {
+        answer.type.unshift('js') // default js
+    }
     // Check vscode version
     // let vscodeVersion = childProcess.execSync('code --version');
     // vscodeVersion = vscodeVersion.toString();
