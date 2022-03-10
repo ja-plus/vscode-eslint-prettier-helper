@@ -1,8 +1,8 @@
 module.exports = {
   // 一行最多字符
-  printWidth: 110,
-  // 使用2空格缩进
-  tabWidth: 2,
+  printWidth: 150,
+  // 使用4空格缩进
+  tabWidth: 4,
   // 禁用tab缩进
   useTabs: false,
   // 删除尾行分号
@@ -10,17 +10,17 @@ module.exports = {
   // 使用单引号
   singleQuote: true,
   // 对象的key仅在必要时使用引号
-  quoteProps: 'as-needed',
+  // quoteProps: 'as-needed',
   // jsx中使用双引号非单引号
-  jsxSingleQuote: false,
+  // jsxSingleQuote: false,
   // jsx 标签的反尖括号需要换行
-  jaxBracketSameLine: false,
-  // 末尾不需要逗号
-  // trailingComma: 'none',
+  // jaxBracketSameLine: false,
+  // 末尾逗号
+  trailingComma: 'all',
   // 大括号的首位需要空格
   bracketSpacing: true,
   // 箭头函数只有一个参数也要括号
-  arrowParents: 'always',
+  arrowParents: 'aviod',
   // 文件格式化范围 -全部内容
   // rangeStart: 0,
   // rangeEnd: Infinity,
@@ -30,6 +30,7 @@ module.exports = {
   // insertPragma: false,
   // 使用默认的折行标准
   // proseWrap: 'preserver',
+  // 添加尾随逗号
   // 不检查每行结束的格式
   endOfLine: 'auto'
 }

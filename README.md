@@ -2,7 +2,7 @@
 ## What will do
 * Install vscode eslint plugin (*dbaeumer.vscode-eslint-2.2.3.vsix*)
 * Npm install eslint prettier packages
-* Add .eslintignore .eslintrc.js .prettier.js
+* Add .eslintignore .eslintrc.js .prettier.js .prettierignore
 * Set vscode settings.json.(do eslint --fix when save file) 
 ### Installed npm packages versions
 > "eslint": "8.1.0",  

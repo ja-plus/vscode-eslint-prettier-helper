@@ -1,8 +1,12 @@
 {
   "name": "vscode-eslint-prettier-helper",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "vscode eslint prettier",
-  "keywords":["vscode","eslint","prettier"],
+  "keywords": [
+    "vscode",
+    "eslint",
+    "prettier"
+  ],
   "main": "src/main.js",
   "repository": {
     "type": "git",
