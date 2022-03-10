@@ -19,7 +19,7 @@ prompt([
     require('./installExt.js')()
 
     // update settings.json
-    require('./updateSettings.js')
+    require('./updateSettings.js')()
 
     require('./copyConfigFile.js')(answer.type)
 

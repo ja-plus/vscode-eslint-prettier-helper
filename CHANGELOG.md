@@ -1,3 +1,5 @@
+## 1.1.1
+* fix: update vscode setting.json not work 
 ## 1.1.0 
 * fix: .prettierrc.js <code>arrowParens</code> spell mistake
 * add: command select. (depend inquirer)

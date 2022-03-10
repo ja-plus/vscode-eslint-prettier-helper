@@ -1,6 +1,6 @@
 {
   "name": "vscode-eslint-prettier-helper",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "vscode eslint prettier",
   "keywords": [
     "vscode",
@@ -15,7 +15,9 @@
     "type": "git",
     "url": "https://gitee.com/japlus/vscode-eslint-prettier-helper"
   },
-  "scripts": {},
+  "scripts": {
+    "start": "node src/main.js"
+  },
   "bin": {
     "vscode-eslint-prettier-helper": "./src/main.js"
   },
