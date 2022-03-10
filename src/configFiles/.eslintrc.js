@@ -1,3 +1,4 @@
+/**this config file will be modified by copyConfigFile.js */
 module.exports = {
     root: true,
     env: {
@@ -6,13 +7,11 @@ module.exports = {
         node: true,
     },
     parserOptions: {
-        // parser: "@babel/eslint-parser",
-        // parser: "@typescript-eslint/parser",
-        // ecmaVersion: 13,
-        // sourceType: "module",
+        ecmaVersion: 'latest',
+        sourceType: "module",
     },
-    plugins: ['html', 'prettier', 'vue'],
-    extends: ['eslint:recommended', 'plugin:prettier/recommended', 'plugin:vue/recommended'],
+    plugins: ['html', 'prettier'],
+    extends: ['eslint:recommended', 'plugin:prettier/recommended'],
     rules: {
         'prettier/prettier': 1,
         // semi: [1, 'always'], // 使用分号结尾
