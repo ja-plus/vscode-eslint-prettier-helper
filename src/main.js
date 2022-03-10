@@ -7,7 +7,7 @@ prompt([
         default: ['js', 'vue'],
         name: 'type',
         message: 'Select env:',
-        choices: ['js', 'vue', 'ts'],
+        choices: ['js', 'vue' /* , 'ts' */],
     },
 ]).then(answer => {
     if (!answer.type.includes('js')) {

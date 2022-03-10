@@ -28,6 +28,7 @@ module.exports = function (selectedArr) {
     if (selectedArr.includes('ts')) {
         eslintrc.parserOptions.parser = '@typescript-eslint/parser'
         eslintrc.plugins.push('@typescript-eslint')
+        eslintrc.extends.splice(eslintrc.extends.length - 1, 0, 'plugin:@typescript-eslint/recommended') // prettier rule cover this rule
     }
     // create .eslintrc
     promArr.push(writeFile('.eslintrc', JSON.stringify(eslintrc, null, 4)))

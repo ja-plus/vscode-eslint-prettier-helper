@@ -1,4 +1,4 @@
-/**this config file will be modified by copyConfigFile.js */
+/** this config file will be modified by copyConfigFile.js */
 module.exports = {
     root: true,
     env: {
@@ -8,7 +8,7 @@ module.exports = {
     },
     parserOptions: {
         ecmaVersion: 'latest',
-        sourceType: "module",
+        sourceType: 'module',
     },
     plugins: ['html', 'prettier'],
     extends: ['eslint:recommended', 'plugin:prettier/recommended'],
@@ -31,6 +31,6 @@ module.exports = {
         'key-spacing': 1, // 键值间空格 key:_val
         'new-cap': 1, // 构造函数首字母大写
         eqeqeq: 1, // 使用 ===
-        // 'dot-notation': 1, // 强制使用.不用[]
+        'dot-notation': 1, // 强制使用.不用[]
     },
 }
