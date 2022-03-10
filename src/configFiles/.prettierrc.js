@@ -19,8 +19,8 @@ module.exports = {
   trailingComma: 'all',
   // 大括号的首位需要空格
   bracketSpacing: true,
-  // 箭头函数只有一个参数也要括号
-  arrowParents: 'aviod',
+  // 箭头函数只有一个参数不需要括号
+  arrowParens: 'avoid',
   // 文件格式化范围 -全部内容
   // rangeStart: 0,
   // rangeEnd: Infinity,
