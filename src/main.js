@@ -53,9 +53,13 @@ childProcess.fork(path.resolve(__dirname, './updateSettings.js'))
 // install npm packages
 const eslintPkg = require('./version.json')
 let npmCmd = 'npm i -D'
-for (const pkg in eslintPkg) {
-    const version = eslintPkg[pkg]
-    npmCmd += ' ' + pkg + '@' + version
+// TODO: js /vue/ ts/babel has different package and config files
+for (const type in eslintPkg) {
+    const pkgs = eslintPkg[type]
+    for (const pkg in pkgs) {
+        const version = pkgs[pkg]
+        npmCmd += ' ' + pkg + '@' + version
+    }
 }
 console.log('Installing npm packages...')
 console.log(npmCmd)
