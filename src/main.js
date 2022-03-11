@@ -4,7 +4,7 @@ const prompt = inquirer.createPromptModule()
 prompt([
     {
         type: 'checkbox',
-        default: ['js', 'vue'],
+        default: ['js'],
         name: 'type',
         message: 'Select env:',
         choices: ['js', 'vue' /* , 'ts' */],

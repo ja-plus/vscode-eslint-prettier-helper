@@ -1,4 +1,4 @@
-{
+module.exports = {
     "root": true,
     "env": {
         "browser": true,
@@ -19,24 +19,9 @@
     ],
     "rules": {
         "prettier/prettier": 1,
-        "no-unused-vars": 1,
-        "no-debugger": 1,
-        "space-infix-ops": 1,
-        "arrow-spacing": 1,
-        "keyword-spacing": 1,
-        "no-trailing-spaces": 1,
-        "object-curly-spacing": [
-            1,
-            "always"
-        ],
-        "comma-spacing": 1,
         "spaced-comment": 1,
-        "space-before-block": 0,
-        "switch-colon-spacing": 1,
-        "brace-style": 1,
-        "block-spacing": 1,
-        "key-spacing": 1,
         "new-cap": 1,
-        "eqeqeq": 1
+        "eqeqeq": 1,
+        "dot-notation": 1
     }
 }

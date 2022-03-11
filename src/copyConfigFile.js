@@ -13,6 +13,7 @@ module.exports = function (selectedArr) {
 
     let promArr = []
     for (const fileName of files) {
+        // TODO: check if file exist
         // not copy .eslintrc.js
         if (fileName === '.eslintrc.js') continue
         let prom = copyFile(path.resolve(__dirname, 'configFiles', fileName), fileName)
@@ -31,7 +32,7 @@ module.exports = function (selectedArr) {
         eslintrc.extends.splice(eslintrc.extends.length - 1, 0, 'plugin:@typescript-eslint/recommended') // prettier rule cover this rule
     }
     // create .eslintrc
-    promArr.push(writeFile('.eslintrc', JSON.stringify(eslintrc, null, 4)))
+    promArr.push(writeFile('.eslintrc.js', 'module.exports = ' + JSON.stringify(eslintrc, null, 4)))
 
     return Promise.all(promArr).then(() => {
         console.log('√ Copying config files succeed')
