@@ -3,16 +3,13 @@ const inquirer = require('inquirer')
 const prompt = inquirer.createPromptModule()
 prompt([
     {
-        type: 'checkbox',
-        default: ['js'],
+        type: 'list',
+        default: 'js',
         name: 'type',
         message: 'Select env:',
-        choices: ['js', 'vue' /* , 'ts' */],
+        choices: ['js', 'vue' , 'ts'],
     },
 ]).then(answer => {
-    if (!answer.type.includes('js')) {
-        answer.type.unshift('js') // default js
-    }
     // Check vscode version
     // let vscodeVersion = childProcess.execSync('code --version');
     // vscodeVersion = vscodeVersion.toString();
@@ -23,7 +20,7 @@ prompt([
     // update settings.json
     require('./updateSettings.js')()
 
-    require('./copyConfigFile.js')(answer.type)
+    require('./copyConfigFile.js')(answer)
 
-    require('./installNpmPkgs.js')(answer.type)
+    require('./installNpmPkgs.js')(answer)
 })

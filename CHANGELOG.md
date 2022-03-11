@@ -1,9 +1,9 @@
 ## 1.1.2
 * add: add <code>js</code> option, as default selection
-* fix: eslintrc extends make prettier/recommend is the last one
+* change: single select env
+* change: every env has it's eslintrc.xx.js
 * change: remove <code>vue</code> as default chioce
 * change: remove useless rules in <code>.eslintrc.js</code>
-* change: remove <code>ts</code> option, cause it is not be tested
 ## 1.1.1
 * fix: update vscode setting.json not work 
 ## 1.1.0 

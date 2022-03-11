@@ -7,13 +7,14 @@
 ### Installed npm packages versions
 ```json
 {
-  "js":{
+  "default":{
     "eslint": "8.10.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-html": "6.2.0",
     "eslint-plugin-prettier": "4.0.0",
     "prettier": "2.5.1"
   },
+  "js":{},
   "ts":{
     "@typescript-eslint/eslint-plugin": "5.14.0",
     "@typescript-eslint/parser": "5.14.0"
