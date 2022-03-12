@@ -7,9 +7,9 @@ prompt([
         default: 'js',
         name: 'type',
         message: 'Select env:',
-        choices: ['js', 'vue' , 'ts'],
+        choices: ['js', 'vue', 'ts'],
     },
-]).then(answer => {
+]).then(async answer => {
     // Check vscode version
     // let vscodeVersion = childProcess.execSync('code --version');
     // vscodeVersion = vscodeVersion.toString();
@@ -20,7 +20,9 @@ prompt([
     // update settings.json
     require('./updateSettings.js')()
 
-    require('./copyConfigFile.js')(answer)
+    await require('./copyConfigFile.js')(answer)
 
     require('./installNpmPkgs.js')(answer)
+
+    console.log('\n✔ All task done. Please restart vscode(/Restart eslint plugin/Reolad require). Make effective eslint.')
 })

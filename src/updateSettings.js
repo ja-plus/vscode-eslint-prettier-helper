@@ -25,15 +25,13 @@ module.exports = function () {
         }
         if (!settingsObj['editor.codeActionsOnSave']['source.fixAll.eslint']) {
             settingsObj['editor.codeActionsOnSave']['source.fixAll.eslint'] = true
-            fs.writeFile(filePath, JSON.stringify(settingsObj, null, 2), err => {
-                if (err) console.error(err)
-                console.log('√ Vscode settings.json updated')
-            })
+
+            fs.writeFileSync(filePath, JSON.stringify(settingsObj, null, 2))
+            console.log('✔ Vscode settings.json updated')
         } else {
-            console.log('√ Vscode settings.json has been set. Auto skip this stage')
+            console.log('✔ Vscode settings.json has been set. Auto skip this stage')
         }
     } catch (err) {
-        console.error(err)
-        console.error('Maybe settings.json has format wrong')
+        console.error('✘ Update settings.json failed.', err)
     }
 }

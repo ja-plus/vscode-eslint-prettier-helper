@@ -1,5 +1,7 @@
 ## 1.1.2
 * add: add <code>js</code> option, as default selection
+* add: When copying config file, prompt if overwrite
+* change: sync code
 * change: single select env
 * change: every env has it's eslintrc.xx.js
 * change: remove <code>vue</code> as default chioce

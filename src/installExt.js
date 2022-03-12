@@ -8,11 +8,12 @@ let installedEslintExt = installedExts.find(str => /dbaeumer\.vscode-eslint/.tes
 
 function installVscodePlugin() {
     console.log('Installing vscode eslint plugin 2.2.3...')
-    childProcess.exec('code --install-extension ' + path.resolve(__dirname, './vscodeExts/dbaeumer.vscode-eslint-2.2.3.vsix'), (err, stdout) => {
-        if (err) return console.log('Install vscode eslint plugin failed: ', err)
-        // console.log(stdout);
-        console.log('√ Vscode eslint plugin installation succeeded')
-    })
+    try {
+        childProcess.execSync('code --install-extension ' + path.resolve(__dirname, './vscodeExts/dbaeumer.vscode-eslint-2.2.3.vsix'))
+        console.log('✔ Vscode eslint plugin installation succeeded')
+    } catch (err) {
+        console.log('✘ Install vscode eslint plugin failed: ', err)
+    }
 }
 
 module.exports = function () {
@@ -22,7 +23,7 @@ module.exports = function () {
             console.warn('Installed ESLint plugin version is too early.' + installedEslintExt)
             installVscodePlugin()
         } else {
-            console.log('√ Installed vscdoe plugin:', installedEslintExt, ' Auto skip this stage')
+            console.log('✔ Installed vscdoe plugin:', installedEslintExt, ' Auto skip this stage')
         }
     } else {
         installVscodePlugin()
