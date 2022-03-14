@@ -1,3 +1,5 @@
+## 1.1.3
+* add: command alias: <code>npx veph</code>
 ## 1.1.2
 * add: add <code>js</code> option, as default selection
 * add: When copying config file, prompt if overwrite

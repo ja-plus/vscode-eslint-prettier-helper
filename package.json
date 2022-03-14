@@ -19,7 +19,8 @@
     "start": "node src/main.js"
   },
   "bin": {
-    "vscode-eslint-prettier-helper": "./src/main.js"
+    "vscode-eslint-prettier-helper": "./src/main.js",
+    "veph": "./src/main.js"
   },
   "author": "JA+",
   "contributors": [

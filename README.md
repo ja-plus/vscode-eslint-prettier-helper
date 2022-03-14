@@ -32,7 +32,7 @@ path: ${userHomeDir}/AppData/Roaming/Code/User/settings.json
 }
 ```
 ## Use
-> npx vscode-eslint-prettier-helper  
+> npx vscode-eslint-prettier-helper | npx veph  
 > **or install first**  
 > npm i vscode-eslint-prettier-helper  
 > node node_modules/vscode-eslint-prettier-helper/src/main.js

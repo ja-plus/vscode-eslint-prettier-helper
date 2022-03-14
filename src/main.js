@@ -25,4 +25,5 @@ prompt([
     require('./installNpmPkgs.js')(answer)
 
     console.log('\n✔ All task done. Please restart vscode(/Restart eslint plugin/Reolad require). Make effective eslint.')
+    console.log('\n? Did not come into effect? Make sure the folder that vscode opened, which has the config file and node_modules in root directory.')
 })
