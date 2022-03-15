@@ -11,7 +11,7 @@
     "@typescript-eslint/eslint-plugin": "5.14.0",
     "@typescript-eslint/parser": "5.14.0"
   },
-  "vue":{
+  "vue2":{
     "eslint-plugin-vue": "8.5.0"
   }
 }

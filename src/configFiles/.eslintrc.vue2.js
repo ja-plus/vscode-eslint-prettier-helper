@@ -1,4 +1,4 @@
-/** this config file will be modified by copyConfigFile.js */
+/** vue2 eslint config*/
 module.exports = {
     root: true,
     env: {

@@ -1,5 +1,7 @@
 ## 1.1.3
 * add: command alias: <code>npx veph</code>
+* add: jsconfig.json in vue2
+* change: <code>vue</code> to <code>vue2</code>
 ## 1.1.2
 * add: add <code>js</code> option, as default selection
 * add: When copying config file, prompt if overwrite

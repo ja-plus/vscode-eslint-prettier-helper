@@ -6,7 +6,7 @@ const copyFile = promisify(fs.copyFile)
 const inquirer = require('inquirer')
 const prompt = inquirer.createPromptModule()
 // Copy config files
-let files = fs.readdirSync(path.resolve(__dirname, './configFiles'))
+// let files = fs.readdirSync(path.resolve(__dirname, './configFiles'))
 
 function copyFileWrapper(sourceFileName, targetFileName = sourceFileName) {
     let fileExist = fs.existsSync(targetFileName)
@@ -36,13 +36,17 @@ module.exports = async function ({ type }) {
     console.log('Copying config files...')
     // console.log(files)
     try {
-        for (const fileName of files) {
-            // not copy .eslintrc.xx.js
-            if (fileName.startsWith('.eslintrc')) continue
+        // copy .eslintrc file
+        await copyFileWrapper(`.eslintrc.${type}.js`, '.eslintrc.js')
+        // copy jsconfig.json
+        if (type === 'vue2') await copyFileWrapper('jsconfig.json')
+
+        // copy other file
+        const files = ['.eslintignore', '.prettierignore', '.prettierrc.js']
+        for (let i = 0; i < files.length; i++) {
+            const fileName = files[i]
             await copyFileWrapper(fileName)
         }
-        // create .eslintrc
-        await copyFileWrapper(`.eslintrc.${type}.js`, '.eslintrc.js')
 
         console.log('✔ Copying config files succeed')
     } catch (err) {
