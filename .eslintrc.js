@@ -1,4 +1,4 @@
-/** this config file will be modified by copyConfigFile.js */
+/** default js eslint config */
 module.exports = {
     root: true,
     env: {

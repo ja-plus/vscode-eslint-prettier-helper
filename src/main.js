@@ -14,18 +14,21 @@ prompt([
     // let vscodeVersion = childProcess.execSync('code --version');
     // vscodeVersion = vscodeVersion.toString();
     // console.log(vscodeVersion);
+    try {
+        require('./installExt.js')(answer)
 
-    require('./installExt.js')()
+        // update settings.json
+        require('./updateSettings.js')()
 
-    // update settings.json
-    require('./updateSettings.js')()
+        await require('./copyConfigFile.js')(answer)
 
-    await require('./copyConfigFile.js')(answer)
+        require('./installNpmPkgs.js')(answer)
 
-    require('./installNpmPkgs.js')(answer)
-
-    console.log('\n✔ All task done. Please restart vscode(/Restart eslint plugin/Reolad require). Make effective eslint.')
-    console.log(
-        '\n? Did not come into effect? Make sure the folder that vscode opened, which has the config file and node_modules in root directory.',
-    )
+        console.log('\n✔ All task done. Please restart vscode(/Restart eslint plugin/Reolad require). Make effective eslint.')
+        console.log(
+            '\n? Did not come into effect? Make sure the folder that vscode opened, which has the config file and node_modules in root directory.',
+        )
+    } catch (err) {
+        console.error(err)
+    }
 })

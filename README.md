@@ -1,13 +1,15 @@
 # vscode-eslint-prettier-helper
 ## What will do
-* Install vscode eslint plugin (*dbaeumer.vscode-eslint-2.2.3.vsix*)
+* Install vscode plugin (
+    - dbaeumer.vscode-eslint
+    - octref.vetur [<code>vue2</code>]
 * Npm install eslint prettier packages
 * Add config files:
     - .eslintrc.js 
     - .eslintignore 
     - .prettier.js 
     - .prettierignore 
-    - jsconfig.json ['vue2']// Added when select vue2. This file make vscode recognize '@' alias 
+    - jsconfig.json [<code>vue2</code>] // Added when select vue2. This file make vscode recognize '@' alias 
 * Set vscode settings.json.(Auto run eslint --fix when save file(*press ctrl + s*)) 
 ### Installed npm packages versions
 ```json
