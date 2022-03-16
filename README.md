@@ -3,13 +3,14 @@
 * Install vscode plugin (
     - dbaeumer.vscode-eslint
     - octref.vetur [<code>vue2</code>]
-* Npm install eslint prettier packages
+    - johnsoncodehk.volar [<code>vue3</code>]
 * Add config files:
     - .eslintrc.js 
     - .eslintignore 
     - .prettier.js 
     - .prettierignore 
-    - jsconfig.json [<code>vue2</code>] // Added when select vue2. This file make vscode recognize '@' alias 
+    - jsconfig.json [<code>vue2</code>, <code>vue3</code>] // Added when select vue. This file make vscode recognize '@' alias 
+* Npm install eslint prettier packages
 * Set vscode settings.json.(Auto run eslint --fix when save file(*press ctrl + s*)) 
 ### Installed npm packages versions
 ```json
@@ -28,12 +29,15 @@
   },
   "vue2":{
     "eslint-plugin-vue": "8.5.0"
+  },
+  "vue3":{
+    "eslint-plugin-vue": "8.5.0"
   }
 }
 ``` 
 ### Add this config to vscode settings.json
 path: ${userHomeDir}/AppData/Roaming/Code/User/settings.json
-```  
+```json  
 "editor.codeActionsOnSave": {
   "source.fixAll.eslint": true
 }

@@ -7,7 +7,7 @@ prompt([
         default: 'js',
         name: 'type',
         message: 'Select env:',
-        choices: ['js', 'vue2', 'ts'],
+        choices: ['js', 'vue2', 'vue3', 'ts'],
     },
 ]).then(async answer => {
     // Check vscode version

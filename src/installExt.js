@@ -16,6 +16,7 @@ const typeExtMapper = {
 const codeExt = {
     eslint: { name: 'dbaeumer.vscode-eslint', validVersion: '2.2.0' },
     vetur: { name: 'octref.vetur', validVersion: '0.34.1' },
+    volar: { name: 'johnsoncodehk.volar', validVersion: '0.33.2' },
 }
 
 function installVscodePlugin(extName) {
@@ -28,7 +29,6 @@ function installVscodePlugin(extName) {
         console.log(`✔ Vscode plugin(${extName}) installation succeeded`)
     } catch (err) {
         // maybe network error
-        // childProcess.execSync('code --install-extension ' + path.resolve(__dirname, './vscodeExts/', extName))
         console.log('✘ Install vscode plugin failed: ' + err)
     }
 }
@@ -45,7 +45,7 @@ function checkExtension(type) {
                 console.warn(`Installed plugin version is too early(${installedExt})`)
                 installVscodePlugin(codeExtItem.name)
             } else {
-                console.log('✔ Installed vscdoe plugin:', installedExt, ' Auto skip this stage')
+                console.log('✔ Installed vscdoe plugin:', installedExt, '. Auto skip this stage')
             }
         } else {
             installVscodePlugin(codeExtItem.name)
@@ -55,4 +55,11 @@ function checkExtension(type) {
 module.exports = function ({ type }) {
     checkExtension('default')
     checkExtension(type)
+    if (type.startsWith('vue')) {
+        let clgMap = {
+            vue2: '■ Please disable volar and enable vetur.',
+            vue3: '■ Please disable vetur and enable volar.',
+        }
+        console.log(clgMap[type])
+    }
 }

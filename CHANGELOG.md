@@ -1,7 +1,9 @@
-## 1.1.3
+## 1.2.0
+* add: <code>vue3</code> select,
 * add: command alias: <code>npx veph</code>
 * add: jsconfig.json in vue2
 * add: vscode extensiton(<code>octref.vetur</code>) when select vue2
+* add: vscode extensiton(<code>johnsoncodehk.volar</code>) when select vue3
 * change: <code>vue</code> to <code>vue2</code>
 ## 1.1.2
 * add: add <code>js</code> option, as default selection

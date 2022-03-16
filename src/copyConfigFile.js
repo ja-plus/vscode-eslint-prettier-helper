@@ -39,7 +39,7 @@ module.exports = async function ({ type }) {
         // copy .eslintrc file
         await copyFileWrapper(`.eslintrc.${type}.js`, '.eslintrc.js')
         // copy jsconfig.json
-        if (type === 'vue2') await copyFileWrapper('jsconfig.json')
+        if (['vue2', 'vue3'].includes(type)) await copyFileWrapper('jsconfig.json')
 
         // copy other file
         const files = ['.eslintignore', '.prettierignore', '.prettierrc.js']
