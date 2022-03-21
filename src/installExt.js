@@ -61,5 +61,6 @@ module.exports = function ({ type }) {
             vue3: '■ Please disable vetur and enable volar.',
         }
         console.log(clgMap[type])
+        console.log('■ If eslint not work with vue-cli, Try to remove @veu/cli-plugin-eslint')
     }
 }

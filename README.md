@@ -53,3 +53,4 @@ windows7
 > node 12.22.9
 ## ps
 vscode eslint plugin < 2.2.0 not support eslint@8  
+If it not work in vue-cli@4, Try <code>npm remove @veu/cli-plugin-eslint babel-loader</code>

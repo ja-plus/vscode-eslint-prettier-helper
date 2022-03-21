@@ -1,5 +1,5 @@
 ## 1.2.0
-* add: <code>vue3</code> select,
+* add: <code>vue3</code> options
 * add: command alias: <code>npx veph</code>
 * add: jsconfig.json in vue2
 * add: vscode extensiton(<code>octref.vetur</code>) when select vue2
