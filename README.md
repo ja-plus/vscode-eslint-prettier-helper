@@ -1,9 +1,9 @@
 # vscode-eslint-prettier-helper
 ## What will do
 * Install vscode plugin (
-    - dbaeumer.vscode-eslint
-    - octref.vetur [<code>vue2</code>]
-    - johnsoncodehk.volar [<code>vue3</code>]
+    - dbaeumer.vscode-eslint (offline)
+    - octref.vetur (online) [<code>vue2</code>]
+    - johnsoncodehk.volar (online) [<code>vue3</code>]
 * Add config files:
     - .eslintrc.js 
     - .eslintignore 
@@ -53,4 +53,4 @@ windows7
 > node 12.22.9
 ## ps
 vscode eslint plugin < 2.2.0 not support eslint@8  
-If it not work in vue-cli@4, Try <code>npm remove @veu/cli-plugin-eslint babel-loader</code>
+If it not work in vue-cli@4, Try <code>npm remove @vue/cli-plugin-eslint babel-eslint</code>
