@@ -43,10 +43,10 @@ path: ${userHomeDir}/AppData/Roaming/Code/User/settings.json
 }
 ```
 ## Use
-> npx vscode-eslint-prettier-helper | npx veph  
+> npx vscode-eslint-prettier-helper  
 > **or install first**  
 > npm i vscode-eslint-prettier-helper  
-> node node_modules/vscode-eslint-prettier-helper/src/main.js
+> npx veph
 ## Pass the test on the following platforms
 windows7
 > vscode > 1.60 (which can install the supported eslint plugin2.2.3)  
