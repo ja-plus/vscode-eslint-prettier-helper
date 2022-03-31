@@ -1,5 +1,6 @@
 ## 1.3.0
 * add: <code>vue2-ts</code> options
+* add: vscode version check > 1.60
 ## 1.2.0
 * add: <code>vue3</code> options
 * add: command alias: <code>npx veph</code>

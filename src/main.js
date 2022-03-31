@@ -1,19 +1,38 @@
 #!/usr/bin/env node
+const childProcess = require('child_process')
 const inquirer = require('inquirer')
+const { promptChoices, minCodeVersion } = require('./config.js')
 const prompt = inquirer.createPromptModule()
-prompt([
-    {
-        type: 'list',
-        default: 'js',
-        name: 'type',
-        message: 'Select env:',
-        choices: ['js', 'vue2', 'vue3', 'ts', 'vue2-ts'],
+
+let vscodeVersion = childProcess.execSync('code --version').toString()
+vscodeVersion = vscodeVersion.split('\n')[0]
+
+let promptParams = []
+
+// Check vscode version
+if (vscodeVersion < minCodeVersion) {
+    promptParams.push({
+        type: 'confirm',
+        name: 'invalidVersion',
+        message: `Your vscode version(${vscodeVersion}) < ${minCodeVersion}, It can cause some errors, Still continue?`,
+        default: false,
+    })
+}
+
+promptParams.push({
+    type: 'list',
+    default: 'js',
+    name: 'type',
+    message: 'Select env:',
+    choices: promptChoices,
+    when(answer) {
+        return answer.invalidVersion === undefined || answer.invalidVersion === true
     },
-]).then(async answer => {
-    // Check vscode version
-    // let vscodeVersion = childProcess.execSync('code --version');
-    // vscodeVersion = vscodeVersion.toString();
-    // console.log(vscodeVersion);
+})
+
+prompt(promptParams).then(async answer => {
+    if (answer.invalidVersion === false) return
+
     try {
         console.log('\n► Start Installing vscode extension.')
         require('./installExt.js')(answer)

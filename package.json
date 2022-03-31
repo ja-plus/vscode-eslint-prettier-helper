@@ -1,7 +1,7 @@
 {
   "name": "vscode-eslint-prettier-helper",
   "version": "1.3.0",
-  "description": "vscode eslint prettier",
+  "description": "Auto set eslint prettier in vscode",
   "keywords": [
     "vscode",
     "eslint",
