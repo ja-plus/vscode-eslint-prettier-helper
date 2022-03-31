@@ -18,5 +18,7 @@ module.exports = {
         'new-cap': 1, // 构造函数首字母大写
         eqeqeq: 1, // 使用 ===
         'dot-notation': 1, // 强制使用.不用[]
+        // 'no-debugger': 0,
+        // 'no-console': 0,
     },
 }

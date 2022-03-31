@@ -7,18 +7,23 @@
 const fs = require('fs')
 const path = require('path')
 const os = require('os')
-
+const platform = os.platform()
 module.exports = function () {
-    const filePath = path.join(os.homedir(), 'AppData/Roaming/Code/User/settings.json')
-    console.log('\n', filePath)
-    console.log('Vscode settings.json add configuration...')
+    // TODO: Compatible with linux
     try {
+        if (platform !== 'win32') {
+            throw new Error('Did not fit your platform(' + platform + ').')
+        }
+        const filePath = path.join(os.homedir(), 'AppData/Roaming/Code/User/settings.json')
+        console.log('File path: ', filePath)
+
         const data = fs.readFileSync(filePath)
         let settingsStr = data.toString()
         // Remove the comma from the last line.(if it has)(Make JSON.parse work properly)
         settingsStr = settingsStr.replace(/, *\n? *\}/, str => {
             return str.replace(',', '')
         })
+
         const settingsObj = JSON.parse(settingsStr) || {}
         if (!settingsObj['editor.codeActionsOnSave']) {
             settingsObj['editor.codeActionsOnSave'] = {}
@@ -33,5 +38,6 @@ module.exports = function () {
         }
     } catch (err) {
         console.error('✘ Update settings.json failed.', err)
+        console.error('■ Set settings.json yourself:', ' "editor.codeActionsOnSave": { "source.fixAll.eslint": true }, ')
     }
 }

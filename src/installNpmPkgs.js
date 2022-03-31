@@ -1,17 +1,16 @@
 // install npm packages
 const childProcess = require('child_process')
-const eslintPkg = require('./version.json')
+const { npmPkgs } = require('./config')
 
 module.exports = function ({ type }) {
     let npmCmd = 'npm i -D'
     for (const key of ['default', type]) {
-        const pkgs = eslintPkg[key]
+        const pkgs = npmPkgs[key]
         for (const pkg in pkgs) {
             const version = pkgs[pkg]
             npmCmd += ' ' + pkg + '@' + version
         }
     }
-    console.log('Installing npm packages...')
     console.log(npmCmd)
     try {
         childProcess.execSync(npmCmd)

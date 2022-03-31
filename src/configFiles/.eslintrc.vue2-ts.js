@@ -1,4 +1,4 @@
-/** typescript eslint config */
+/** vue2 eslint config*/
 module.exports = {
     root: true,
     env: {
@@ -11,8 +11,8 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['html', 'prettier', '@typescript-eslint'],
-    extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+    plugins: ['html', 'vue', 'prettier', '@typescript-eslint'],
+    extends: ['eslint:recommended', 'plugin:vue/recommended', '@vue/typescript/recommended', 'plugin:prettier/recommended'],
     rules: {
         'prettier/prettier': 1,
         'spaced-comment': 1, // 注释斜杠后空格

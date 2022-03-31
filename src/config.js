@@ -1,0 +1,44 @@
+module.exports = {
+    /** 类型对应vscode插件 */
+    typeExtMapper: {
+        default: ['eslint'],
+        js: [],
+        vue2: ['vetur'],
+        vue3: ['volar'],
+        'vue2-ts': ['vetur'],
+        'vue3-ts': ['volar'],
+    },
+    // vscode 插件
+    codeExt: {
+        eslint: { name: 'dbaeumer.vscode-eslint', validVersion: '2.2.0' },
+        vetur: { name: 'octref.vetur', validVersion: '0.34.1' },
+        volar: { name: 'johnsoncodehk.volar', validVersion: '0.33.2' },
+    },
+    // ---npm 依赖
+    npmPkgs: {
+        default: {
+            eslint: '8.10.0',
+            'eslint-config-prettier': '8.5.0',
+            'eslint-plugin-html': '6.2.0',
+            'eslint-plugin-prettier': '4.0.0',
+            prettier: '2.5.1',
+        },
+        js: {},
+        ts: {
+            '@typescript-eslint/eslint-plugin': '5.14.0',
+            '@typescript-eslint/parser': '5.14.0',
+        },
+        vue2: {
+            'eslint-plugin-vue': '8.5.0',
+        },
+        vue3: {
+            'eslint-plugin-vue': '8.5.0',
+        },
+        'vue2-ts': {
+            '@typescript-eslint/eslint-plugin': '5.14.0',
+            '@typescript-eslint/parser': '5.14.0',
+            'eslint-plugin-vue': '8.5.0',
+            '@vue/eslint-config-typescript': '8.0.0',
+        },
+    },
+}

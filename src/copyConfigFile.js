@@ -33,7 +33,6 @@ function copyFileWrapper(sourceFileName, targetFileName = sourceFileName) {
 }
 
 module.exports = async function ({ type }) {
-    console.log('Copying config files...')
     // console.log(files)
     try {
         // copy .eslintrc file

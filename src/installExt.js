@@ -1,23 +1,13 @@
 const childProcess = require('child_process')
 const path = require('path')
 const fs = require('fs')
+const { typeExtMapper, codeExt } = require('./config')
+
 const extFileNames = fs.readdirSync(path.resolve(__dirname, './vscodeExts'))
 
 // console.log('Checks whether the VScode ESLint plugin is installed')
 let installedExts = childProcess.execSync('code --list-extensions --show-versions')
 installedExts = installedExts.toString().split('\n')
-
-const typeExtMapper = {
-    default: ['eslint'],
-    js: [],
-    vue2: ['vetur'],
-    vue3: ['volar'],
-}
-const codeExt = {
-    eslint: { name: 'dbaeumer.vscode-eslint', validVersion: '2.2.0' },
-    vetur: { name: 'octref.vetur', validVersion: '0.34.1' },
-    volar: { name: 'johnsoncodehk.volar', validVersion: '0.33.2' },
-}
 
 function installVscodePlugin(extName) {
     console.log(`Installing vscode plugin ${extName}...`)
@@ -45,7 +35,7 @@ function checkExtension(type) {
                 console.warn(`Installed plugin version is too early(${installedExt})`)
                 installVscodePlugin(codeExtItem.name)
             } else {
-                console.log('✔ Installed vscdoe plugin:', installedExt, '. Auto skip this stage')
+                console.log('✔ Installed vscode plugin:', installedExt, '. Auto skip this stage')
             }
         } else {
             installVscodePlugin(codeExtItem.name)
@@ -61,6 +51,6 @@ module.exports = function ({ type }) {
             vue3: '■ Please disable vetur and enable volar.',
         }
         console.log(clgMap[type])
-        console.log('■ If eslint not work with vue-cli, Try to remove @veu/cli-plugin-eslint')
+        console.log('■ If eslint not work with vue-cli, Try to remove @vue/cli-plugin-eslint')
     }
 }

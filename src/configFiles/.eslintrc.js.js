@@ -16,7 +16,8 @@ module.exports = {
         'prettier/prettier': 1,
         // semi: [1, 'always'], // 使用分号结尾
         // 'no-unused-vars': 1,
-        // 'no-debugger': 1,
+        // 'no-debugger': 0,
+        // 'no-console': 0,
         // 'space-infix-ops': 1, // 操作符周围空格 // prettier/recommended
         // 'arrow-spacing': 1, // 箭头函数空格 // prettier/recommended
         // 'keyword-spacing': 1, // 关键词空格// prettier/recommended
