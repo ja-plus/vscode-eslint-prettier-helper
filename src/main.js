@@ -44,7 +44,7 @@ prompt(promptParams).then(async answer => {
         console.log('\n► Copying config files...')
         await require('./copyConfigFile.js')(answer)
 
-        console.log('\n►Installing npm packages...')
+        console.log('\n► Installing npm packages...')
         require('./installNpmPkgs.js')(answer)
 
         console.log('\n✔ All task done. Please restart vscode( / Restart eslint plugin / Reload require). Make effective eslint.')

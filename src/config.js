@@ -2,7 +2,7 @@ module.exports = {
     /** valid vscode version */
     minCodeVersion: '1.60.0',
     /** inquirer choices*/
-    promptChoices: ['js', 'vue2', 'vue3', 'ts', 'vue2-ts'],
+    promptChoices: ['js', 'vue2', 'vue3', 'ts', 'vue2-ts', 'vue3-ts'],
     /** type -> vscode extensions */
     typeExtMapper: {
         default: ['eslint'],

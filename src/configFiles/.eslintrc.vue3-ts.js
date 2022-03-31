@@ -12,13 +12,7 @@ module.exports = {
         sourceType: 'module',
     },
     plugins: ['html', 'vue', 'prettier', '@typescript-eslint'],
-    extends: [
-        'eslint:recommended',
-        'plugin:vue/vue3-recommended',
-        '@vue/typescript/recommended',
-        'prettier/@typescript-eslint',
-        'plugin:prettier/recommended',
-    ],
+    extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', '@vue/typescript/recommended', 'plugin:prettier/recommended'],
     rules: {
         'prettier/prettier': 1,
         'spaced-comment': 1, // 注释斜杠后空格

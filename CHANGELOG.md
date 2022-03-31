@@ -1,5 +1,5 @@
 ## 1.3.0
-* add: <code>vue2-ts</code> options
+* add: <code>vue2-ts</code>, <code>vue3-ts</code> options
 * add: vscode version check > 1.60
 ## 1.2.0
 * add: <code>vue3</code> options
