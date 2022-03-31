@@ -50,7 +50,7 @@ module.exports = function ({ type }) {
             vue2: '■ Please disable volar and enable vetur.',
             vue3: '■ Please disable vetur and enable volar.',
         }
-        console.log(clgMap[type])
+        console.log(clgMap[type.substring(0, 4)])
         console.log('■ If eslint not work with vue-cli, Try to remove @vue/cli-plugin-eslint')
     }
 }
