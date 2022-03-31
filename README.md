@@ -9,30 +9,42 @@
     - .eslintignore 
     - .prettier.js 
     - .prettierignore 
-    - jsconfig.json [<code>vue2</code>, <code>vue3</code>] // Added when select vue. This file make vscode recognize '@' alias 
+    - jsconfig.json [<code>vue2</code>, <code>vue3</code>] //  This file make vscode recognize '@' alias 
 * Npm install eslint prettier packages
 * Set vscode settings.json.(Auto run eslint --fix when save file(*press ctrl + s*)) 
 ### Installed npm packages versions
-```json
+```javascript
 {
-  "default":{
-    "eslint": "8.10.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-html": "6.2.0",
-    "eslint-plugin-prettier": "4.0.0",
-    "prettier": "2.5.1"
+  default: {
+      eslint: '8.10.0',
+      'eslint-config-prettier': '8.5.0',
+      'eslint-plugin-html': '6.2.0',
+      'eslint-plugin-prettier': '4.0.0',
+      prettier: '2.5.1',
   },
-  "js":{},
-  "ts":{
-    "@typescript-eslint/eslint-plugin": "5.14.0",
-    "@typescript-eslint/parser": "5.14.0"
+  js: {},
+  ts: {
+      '@typescript-eslint/eslint-plugin': '5.14.0',
+      '@typescript-eslint/parser': '5.14.0',
   },
-  "vue2":{
-    "eslint-plugin-vue": "8.5.0"
+  vue2: {
+      'eslint-plugin-vue': '8.5.0',
   },
-  "vue3":{
-    "eslint-plugin-vue": "8.5.0"
-  }
+  vue3: {
+      'eslint-plugin-vue': '8.5.0',
+  },
+  'vue2-ts': {
+      '@typescript-eslint/eslint-plugin': '5.14.0',
+      '@typescript-eslint/parser': '5.14.0',
+      'eslint-plugin-vue': '8.5.0',
+      '@vue/eslint-config-typescript': '8.0.0',
+  },
+  'vue3-ts': {
+      '@typescript-eslint/eslint-plugin': '5.14.0',
+      '@typescript-eslint/parser': '5.14.0',
+      'eslint-plugin-vue': '8.5.0',
+      '@vue/eslint-config-typescript': '8.0.0',
+  },
 }
 ``` 
 ### Add this config to vscode settings.json
