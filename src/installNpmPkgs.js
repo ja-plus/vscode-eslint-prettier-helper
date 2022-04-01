@@ -3,7 +3,7 @@ const childProcess = require('child_process')
 const { npmPkgs } = require('./config')
 
 module.exports = function ({ type }) {
-    let npmCmd = 'npm i -D'
+    let npmCmd = 'npm i -D --legacy-peer-deps'
     for (const key of ['default', type]) {
         const pkgs = npmPkgs[key]
         for (const pkg in pkgs) {
