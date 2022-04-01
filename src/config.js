@@ -39,15 +39,15 @@ module.exports = {
             'eslint-plugin-vue': '8.5.0',
         },
         'vue2-ts': {
+            'eslint-plugin-vue': '8.5.0',
             '@typescript-eslint/eslint-plugin': '5.14.0',
             '@typescript-eslint/parser': '5.14.0',
-            'eslint-plugin-vue': '8.5.0',
             '@vue/eslint-config-typescript': '8.0.0',
         },
         'vue3-ts': {
+            'eslint-plugin-vue': '8.5.0',
             '@typescript-eslint/eslint-plugin': '5.14.0',
             '@typescript-eslint/parser': '5.14.0',
-            'eslint-plugin-vue': '8.5.0',
             '@vue/eslint-config-typescript': '8.0.0',
         },
     },
