@@ -5,16 +5,16 @@
  * },
  */
 const fs = require('fs')
-const path = require('path')
 const os = require('os')
+const path = require('path')
+const { settingFilePath } = require('./config')
 const platform = os.platform()
 module.exports = function () {
-    // TODO: Compatible with linux
     try {
-        if (platform !== 'win32') {
+        if (!settingFilePath[platform]) {
             throw new Error('Did not fit your platform(' + platform + ').')
         }
-        const filePath = path.join(os.homedir(), 'AppData/Roaming/Code/User/settings.json')
+        const filePath = path.join(os.homedir(), settingFilePath[platform])
         console.log('File path: ', filePath)
 
         const data = fs.readFileSync(filePath)

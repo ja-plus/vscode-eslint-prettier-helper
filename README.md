@@ -86,9 +86,12 @@ Auto config vscode eslint + prettier code formatter
 
 ---
 ## Pass the test on the following platforms
-windows7
+### windows7
 > vscode > 1.60 (which can install the supported eslint plugin2.2.3)  
 > node 12.22.9
+### linux (deepin 20.4)
+> vscode 1.65  
+> node 14.16.1
 
 ---
 ## ps

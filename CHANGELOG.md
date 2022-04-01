@@ -1,9 +1,10 @@
 ## 1.3.1
-* npm i add `--legacy-peer-deps`
-* set eslint rule:
+* add: npm i add `--legacy-peer-deps`
+* add: set eslint rule:
     - 'vue/multi-word-component-names': 1, (`vue2-ts`)
     - '@typescript-eslint/no-empty-function': 1 (`vue2-ts` / `vue3-ts`)
     - delete rule: new-cap (`vue2-ts` / `vue3-ts`)
+* add: Support linux(test on deepin 20.4)
 
 ## 1.3.0
 * add: `vue2-ts`, `vue3-ts` options

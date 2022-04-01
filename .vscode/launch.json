@@ -20,7 +20,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "./src/updateSettings.js"
+      "program": "./test/updateSettings.js"
     },
     {
       "type": "pwa-node",
