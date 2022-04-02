@@ -5,11 +5,10 @@ Auto config vscode eslint + prettier code formatter
 > **or install first**  
 > npm i vscode-eslint-prettier-helper  
 > npx veph
----
 ## What will do
 
 <details>
-    <summary>Install vscode plugin</summary>
+    <summary>Install vscode extensions</summary>
     <ul>
         <li>dbaeumer.vscode-eslint (offline)</li>
         <li>octref.vetur (online) [<code>vue2</code>]</li>
@@ -83,8 +82,6 @@ Auto config vscode eslint + prettier code formatter
     </code>
 </details>
 
-
----
 ## Pass the test on the following platforms
 ### windows7
 > vscode > 1.60 (which can install the supported eslint plugin2.2.3)  
@@ -93,7 +90,6 @@ Auto config vscode eslint + prettier code formatter
 > vscode 1.65  
 > node 14.16.1
 
----
 ## ps
 vscode eslint plugin < 2.2.0 not support eslint@8  
 If it not work in vue-cli@4, Try `npm remove @vue/cli-plugin-eslint babel-eslint`

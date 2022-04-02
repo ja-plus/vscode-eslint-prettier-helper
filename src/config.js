@@ -51,7 +51,7 @@ module.exports = {
             '@vue/eslint-config-typescript': '8.0.0',
         },
     },
-    // patform - settings.json path
+    // platform - settings.json path
     settingFilePath: {
         win32: 'AppData/Roaming/Code/User/settings.json',
         linux: '.config/Code/User/settings.json',
