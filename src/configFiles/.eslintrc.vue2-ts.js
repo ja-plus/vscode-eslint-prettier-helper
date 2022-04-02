@@ -17,6 +17,7 @@ module.exports = {
         'prettier/prettier': 1,
         'vue/multi-word-component-names': 1, // 组件名称多个字符，更改为1警告
         '@typescript-eslint/no-empty-function': 1, // 不能有空方法，改为1警告
+        '@typescript-eslint/no-var-requires': 0, // 解决vue.config.js中require语法的报错
         'spaced-comment': 1, // 注释斜杠后空格
         eqeqeq: 1, // 使用 ===
         'dot-notation': 1, // 强制使用.不用[]
