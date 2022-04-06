@@ -1,6 +1,7 @@
 ## 1.3.2
 * update:eslint rule:
     - add: '@typescript-eslint/no-var-requires': 0 (`vue2-ts` / `vue3-ts`)
+* fix: Can't install vscode extension in linux
 ## 1.3.1
 * add: npm i add `--legacy-peer-deps`
 * update: eslint rule:

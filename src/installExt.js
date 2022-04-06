@@ -15,7 +15,8 @@ function installVscodePlugin(extName) {
         // find extension .vsix file
         const vsixName = extFileNames.find(str => str.startsWith(extName))
         // if exist .vsix file ,use it. if not, auto download in vscode extension market
-        childProcess.execSync('code --install-extension ' + vsixName ? path.resolve(__dirname, './vscodeExts/', vsixName) : extName)
+        let cmd = 'code --install-extension ' + (vsixName ? path.resolve(__dirname, './vscodeExts/', vsixName) : extName)
+        childProcess.execSync(cmd)
         console.log(`✔ Vscode plugin(${extName}) installation succeeded`)
     } catch (err) {
         // maybe network error
