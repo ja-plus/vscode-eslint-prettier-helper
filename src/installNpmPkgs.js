@@ -16,6 +16,6 @@ module.exports = function ({ type }) {
         childProcess.execSync(npmCmd)
         console.log('✔ Npm packages installation succeed')
     } catch (err) {
-        if (err) return console.err('✘ Npm install failed', err)
+        if (err) return console.error('✘ Npm install failed', err)
     }
 }

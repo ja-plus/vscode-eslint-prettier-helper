@@ -49,6 +49,6 @@ module.exports = async function ({ type }) {
 
         console.log('✔ Copying config files succeed')
     } catch (err) {
-        console.err('✘ Copying file err.', err)
+        console.error('✘ Copying file err.', err)
     }
 }
