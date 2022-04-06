@@ -1,5 +1,5 @@
 # vscode-eslint-prettier-helper
-Auto config vscode eslint + prettier code formatter
+Automatically configure `Visual Studio Code` eslint + prettier code formatter
 ## How to use
 > npx vscode-eslint-prettier-helper  
 > **or install first**  
@@ -28,8 +28,7 @@ Auto config vscode eslint + prettier code formatter
 <details>
     <summary>Npm install eslint prettier packages</summary>
     <code>
-        <pre>
-{
+<pre>{
     default: {
         eslint: '8.10.0',
         'eslint-config-prettier': '8.5.0',
@@ -60,8 +59,7 @@ Auto config vscode eslint + prettier code formatter
         'eslint-plugin-vue': '8.5.0',
         '@vue/eslint-config-typescript': '8.0.0',
     },
-}
-        </pre>
+}</pre>
     </code>
 </details>
 <details>
@@ -70,7 +68,10 @@ Auto config vscode eslint + prettier code formatter
         Set vscode settings.json.(Auto run eslint --fix when save file(*press ctrl + s*))
     </p>
     <p>
-        path(windows): ${userHomeDir}/AppData/Roaming/Code/User/settings.json
+        path(Windows): ${userHomeDir}/AppData/Roaming/Code/User/settings.json
+    </p>
+    <p>
+        path(Linux): ${userHomeDir}/.config/Code/User/settings.json
     </p>
     <p>Add config:</p>
     <code>
@@ -83,10 +84,10 @@ Auto config vscode eslint + prettier code formatter
 </details>
 
 ## Pass the test on the following platforms
-### windows7
+### Windows7
 > vscode > 1.60 (which can install the supported eslint plugin2.2.3)  
 > node 12.22.9
-### linux (deepin 20.4)
+### Linux (deepin 20.4)
 > vscode 1.65  
 > node 14.16.1
 
