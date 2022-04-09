@@ -92,5 +92,7 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 > node 14.16.1
 
 ## ps
-vscode eslint plugin < 2.2.0 not support eslint@8  
-If it not work in vue-cli@4, Try `npm remove @vue/cli-plugin-eslint babel-eslint`
+* vscode eslint plugin < 2.2.0 not support eslint@8  
+* If it not work in vue-cli@4, Try `npm remove @vue/cli-plugin-eslint babel-eslint`  
+* Needn't install vscode `prettier extension`
+* After modify the prettierrc.js, we need restart eslint (Press F1, and select `ESLint: Restart Eslint Server`)
