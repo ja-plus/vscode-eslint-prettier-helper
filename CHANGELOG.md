@@ -1,3 +1,5 @@
+## 1.4.0
+* add: svelte3 support. (Not use prettier)
 ## 1.3.2
 * update:eslint rule:
     - add: '@typescript-eslint/no-var-requires': 0 (`vue2-ts` / `vue3-ts`)

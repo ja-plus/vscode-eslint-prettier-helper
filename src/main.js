@@ -39,7 +39,7 @@ prompt(promptParams).then(async answer => {
 
         // update settings.json
         console.log('\n► Vscode settings.json add configuration...')
-        require('./updateSettings.js')()
+        require('./updateSettings.js')(answer)
 
         console.log('\n► Copying config files...')
         await require('./copyConfigFile.js')(answer)

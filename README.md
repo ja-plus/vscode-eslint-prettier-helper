@@ -13,6 +13,7 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
         <li>dbaeumer.vscode-eslint (offline)</li>
         <li>octref.vetur (online) [<code>vue2</code>]</li>
         <li>johnsoncodehk.volar (online) [<code>vue3</code>]</li>
+        <li>svelte.svelte-vscode (online) [<code>svelte</code>]</li>
     </ul>
 </details>
 <details>
@@ -59,26 +60,39 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
         'eslint-plugin-vue': '8.5.0',
         '@vue/eslint-config-typescript': '8.0.0',
     },
+    svelte3: {
+        'eslint-plugin-svelte3': '3.4.1',
+    },
 }</pre>
     </code>
 </details>
 <details>
-    <summary>Set auto fix code when save file</summary>
+    <summary>Update vscode settings.json</summary>
+    <ul>
+       <li> 
+            Windows: ${userHomeDir}/AppData/Roaming/Code/User/settings.json
+        </li>
+        <li>
+            Linux: ${userHomeDir}/.config/Code/User/settings.json
+        </li>
+    </ul>
     <p>
-        Set vscode settings.json.(Auto run eslint --fix when save file(*press ctrl + s*))
+        Auto run eslint --fix when save file(*press ctrl + s*)
     </p>
-    <p>
-        path(Windows): ${userHomeDir}/AppData/Roaming/Code/User/settings.json
-    </p>
-    <p>
-        path(Linux): ${userHomeDir}/.config/Code/User/settings.json
-    </p>
-    <p>Add config:</p>
     <code>
         <pre>
 "editor.codeActionsOnSave": {
   "source.fixAll.eslint": true
 }
+        </pre>
+    </code>
+    <p>when select svelte3</p>
+    <code>
+        <pre>
+"eslint.validate": [
+    "javascript",
+    "svelte"
+],
         </pre>
     </code>
 </details>

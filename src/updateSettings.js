@@ -9,7 +9,7 @@ const os = require('os')
 const path = require('path')
 const { settingFilePath } = require('./config')
 const platform = os.platform()
-module.exports = function () {
+module.exports = function ({ type }) {
     try {
         if (!settingFilePath[platform]) {
             throw new Error('Did not fit your platform(' + platform + ').')
@@ -25,17 +25,35 @@ module.exports = function () {
         })
 
         const settingsObj = JSON.parse(settingsStr) || {}
+        /**
+         * "eslint.validate": [
+                "javascript",
+                "svelte"
+            ],
+         */
+        if (type === 'svelte3') {
+            if (!settingsObj['eslint.validate']) {
+                settingsObj['eslint.validate'] = []
+            }
+            let eslintValidateSet = new Set(settingsObj['eslint.validate'])
+            eslintValidateSet.add('javascript')
+            eslintValidateSet.add('svelte')
+            settingsObj['eslint.validate'] = Array.from(eslintValidateSet)
+        }
+        /**
+         * "editor.codeActionsOnSave": {
+                "source.fixAll.eslint": true
+            },
+         */
         if (!settingsObj['editor.codeActionsOnSave']) {
             settingsObj['editor.codeActionsOnSave'] = {}
         }
         if (!settingsObj['editor.codeActionsOnSave']['source.fixAll.eslint']) {
             settingsObj['editor.codeActionsOnSave']['source.fixAll.eslint'] = true
-
-            fs.writeFileSync(filePath, JSON.stringify(settingsObj, null, 2))
-            console.log('✔ Vscode settings.json updated')
-        } else {
-            console.log('✔ Vscode settings.json has been set. Auto skip this stage')
         }
+        fs.writeFileSync(filePath, JSON.stringify(settingsObj, null, 2))
+        console.log('✔ Vscode settings.json updated')
+        // console.log('✔ Vscode settings.json has been set. Auto skip this stage')
     } catch (err) {
         console.error('✘ Update settings.json failed.', err)
         console.error('■ Set settings.json yourself:', ' "editor.codeActionsOnSave": { "source.fixAll.eslint": true }, ')

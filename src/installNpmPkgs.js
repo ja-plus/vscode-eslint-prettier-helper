@@ -4,7 +4,7 @@ const { npmPkgs } = require('./config')
 
 module.exports = function ({ type }) {
     let npmCmd = 'npm i -D --legacy-peer-deps'
-    for (const key of ['default', type]) {
+    for (const key of ['eslint', 'prettier', type]) {
         const pkgs = npmPkgs[key]
         for (const pkg in pkgs) {
             const version = pkgs[pkg]
