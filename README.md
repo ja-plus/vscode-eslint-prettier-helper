@@ -5,6 +5,15 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 > **or install first**  
 > npm i vscode-eslint-prettier-helper  
 > npx veph
+
+## Support
+* js
+* ts
+* vue2
+* vue3
+* vue2 + ts
+* vue3 + ts
+* svelte3 (not support prettier)
 ## What will do
 
 <details>
@@ -109,4 +118,4 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 * vscode eslint plugin < 2.2.0 not support eslint@8  
 * If it not work in vue-cli@4, Try `npm remove @vue/cli-plugin-eslint babel-eslint`  
 * Needn't install vscode `prettier extension`
-* After modify the prettierrc.js, we need restart eslint (Press F1, and select `ESLint: Restart Eslint Server`)
+* After modify the prettierrc.js, we need restart eslint (Press F1, and select `ESLint: Restart ESLint Server`)

@@ -1,3 +1,5 @@
+## 1.4.1
+* fix: remove svelte3 prettier config, prettier npm packages
 ## 1.4.0
 * add: svelte3 support. (Not use prettier)
 ## 1.3.2

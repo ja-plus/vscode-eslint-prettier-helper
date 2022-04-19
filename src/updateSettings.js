@@ -1,14 +1,45 @@
 /**
  * update vscode settings.json
- * "editor.codeActionsOnSave": {
- *   "source.fixAll.eslint": true
- * },
+ * @author JA+
  */
 const fs = require('fs')
 const os = require('os')
 const path = require('path')
+const config = require('./config')
 const { settingFilePath } = require('./config')
 const platform = os.platform()
+
+/**
+ * read config.js and write config to setting.json
+ * @param {string} type
+ * @param {object} settingJson
+ */
+function updateSettings(type, settingJson) {
+    let settingCfg = config.settingConfig[type]
+    if (!settingCfg) return
+
+    for (const key in settingCfg) {
+        const item = settingCfg[key]
+        // array
+        if (Array.isArray(item)) {
+            if (!settingJson[key]) {
+                settingJson[key] = []
+            }
+            settingJson[key] = Array.from(new Set(settingJson[key].concat(item)))
+        }
+        // object
+        if (Object.prototype.toString.call(item) === '[object Object]') {
+            if (!settingJson[key]) {
+                settingJson[key] = {}
+            }
+            settingJson[key] = Object.assign(settingJson[key], item)
+        }
+    }
+}
+
+/**
+ * @param {{type:string}} param0
+ */
 module.exports = function ({ type }) {
     try {
         if (!settingFilePath[platform]) {
@@ -25,37 +56,15 @@ module.exports = function ({ type }) {
         })
 
         const settingsObj = JSON.parse(settingsStr) || {}
-        /**
-         * "eslint.validate": [
-                "javascript",
-                "svelte"
-            ],
-         */
-        if (type === 'svelte3') {
-            if (!settingsObj['eslint.validate']) {
-                settingsObj['eslint.validate'] = []
-            }
-            let eslintValidateSet = new Set(settingsObj['eslint.validate'])
-            eslintValidateSet.add('javascript')
-            eslintValidateSet.add('svelte')
-            settingsObj['eslint.validate'] = Array.from(eslintValidateSet)
-        }
-        /**
-         * "editor.codeActionsOnSave": {
-                "source.fixAll.eslint": true
-            },
-         */
-        if (!settingsObj['editor.codeActionsOnSave']) {
-            settingsObj['editor.codeActionsOnSave'] = {}
-        }
-        if (!settingsObj['editor.codeActionsOnSave']['source.fixAll.eslint']) {
-            settingsObj['editor.codeActionsOnSave']['source.fixAll.eslint'] = true
-        }
+
+        updateSettings('default', settingsObj)
+        updateSettings(type, settingsObj)
+
         fs.writeFileSync(filePath, JSON.stringify(settingsObj, null, 2))
         console.log('✔ Vscode settings.json updated')
         // console.log('✔ Vscode settings.json has been set. Auto skip this stage')
     } catch (err) {
         console.error('✘ Update settings.json failed.', err)
-        console.error('■ Set settings.json yourself:', ' "editor.codeActionsOnSave": { "source.fixAll.eslint": true }, ')
+        console.error('■ Set settings.json by yourself')
     }
 }

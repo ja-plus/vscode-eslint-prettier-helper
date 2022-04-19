@@ -1,11 +1,15 @@
+/**
+ * config
+ * @author JA+
+ */
 module.exports = {
     /** valid vscode version */
     minCodeVersion: '1.60.0',
-    /** inquirer choices*/
+    /** inquirer choices */
     promptChoices: ['js', 'vue2', 'vue3', 'ts', 'vue2-ts', 'vue3-ts', 'svelte3'],
     /** type -> vscode extensions */
     typeExtMapper: {
-        default: ['eslint'],
+        eslint: ['eslint'],
         js: [],
         vue2: ['vetur'],
         vue3: ['volar'],
@@ -24,11 +28,11 @@ module.exports = {
     npmPkgs: {
         eslint: {
             eslint: '8.10.0',
-            'eslint-config-prettier': '8.5.0',
             'eslint-plugin-html': '6.2.0',
         },
         prettier: {
             prettier: '2.5.1',
+            'eslint-config-prettier': '8.5.0',
             'eslint-plugin-prettier': '4.0.0',
         },
         js: {},
@@ -62,5 +66,16 @@ module.exports = {
     settingFilePath: {
         win32: 'AppData/Roaming/Code/User/settings.json',
         linux: '.config/Code/User/settings.json',
+    },
+    // setting.json config
+    settingConfig: {
+        default: {
+            'editor.codeActionsOnSave': {
+                'source.fixAll.eslint': true,
+            },
+        },
+        svelte3: {
+            'eslint.validate': ['javascript', 'svelte'],
+        },
     },
 }

@@ -1,3 +1,7 @@
+/**
+ * Install vscode extension by vscode cli
+ * @author JA+
+ */
 const childProcess = require('child_process')
 const path = require('path')
 const fs = require('fs')
@@ -9,7 +13,10 @@ const extFileNames = fs.readdirSync(path.resolve(__dirname, './vscodeExts'))
 let installedExts = childProcess.execSync('code --list-extensions --show-versions')
 installedExts = installedExts.toString().split('\n')
 
-function installVscodePlugin(extName) {
+/**
+ * @param {string} extName
+ */
+function installVscodeExtension(extName) {
     console.log(`Installing vscode plugin ${extName}...`)
     try {
         // find extension .vsix file
@@ -23,7 +30,10 @@ function installVscodePlugin(extName) {
         console.log('✘ Install vscode plugin failed: ' + err)
     }
 }
-
+/**
+ *
+ * @param {string} type selected env type
+ */
 function checkExtension(type) {
     typeExtMapper[type].forEach(exts => {
         const codeExtItem = codeExt[exts]
@@ -34,17 +44,21 @@ function checkExtension(type) {
             // check installed extension's version
             if (installedExtVersion < codeExtItem.validVersion) {
                 console.warn(`Installed plugin version is too early(${installedExt})`)
-                installVscodePlugin(codeExtItem.name)
+                installVscodeExtension(codeExtItem.name)
             } else {
                 console.log('✔ Installed vscode plugin:', installedExt, '. Auto skip this stage')
             }
         } else {
-            installVscodePlugin(codeExtItem.name)
+            installVscodeExtension(codeExtItem.name)
         }
     })
 }
+/**
+ *
+ * @param {{type:string}}} param0
+ */
 module.exports = function ({ type }) {
-    checkExtension('default')
+    checkExtension('eslint')
     checkExtension(type)
     if (type.startsWith('vue')) {
         let clgMap = {

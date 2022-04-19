@@ -1,4 +1,8 @@
 #!/usr/bin/env node
+/**
+ * Entry
+ * @author JA+
+ */
 const childProcess = require('child_process')
 const inquirer = require('inquirer')
 const { promptChoices, minCodeVersion } = require('./config.js')

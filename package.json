@@ -1,11 +1,14 @@
 {
   "name": "vscode-eslint-prettier-helper",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Auto set eslint prettier in vscode",
   "keywords": [
     "vscode",
     "eslint",
-    "prettier"
+    "prettier",
+    "vue",
+    "typescript",
+    "svelte"
   ],
   "main": "src/main.js",
   "files": [
