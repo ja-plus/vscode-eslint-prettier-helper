@@ -17,28 +17,29 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 ## What will do
 
 <details>
-    <summary>Install vscode extensions</summary>
-    <ul>
-        <li>dbaeumer.vscode-eslint (offline)</li>
-        <li>octref.vetur (online) [<code>vue2</code>]</li>
-        <li>johnsoncodehk.volar (online) [<code>vue3</code>]</li>
-        <li>svelte.svelte-vscode (online) [<code>svelte</code>]</li>
-    </ul>
+<summary>Install vscode extensions</summary>
+
+* dbaeumer.vscode-eslint (offline)
+* octref.vetur (online) [```vue2```]
+* johnsoncodehk.volar (online) [```vue3```]
+* svelte.svelte-vscode (online) [```svelte```]
 </details>
+
 <details>
-     <summary>Add config files</summary>
-    <ul>
-        <li>.eslintrc.js </li>
-        <li>.eslintignore </li>
-        <li>.prettier.js </li>
-        <li>.prettierignore  </li>
-        <li>jsconfig.json [<code>vue2</code>, <code>vue3</code>] //  This file make vscode recognize '@' alias  </li>
-    </ul>
+<summary>Add config files</summary>
+
+* .eslintrc.js 
+* .eslintignore 
+* .prettier.js
+* .prettierignore
+* jsconfig.json [```vue2```, [```vue3```] //  This file make vscode recognize '@' alias 
 </details>
+
 <details>
-    <summary>Npm install eslint prettier packages</summary>
-    <code>
-<pre>{
+<summary>Npm install eslint prettier packages</summary>
+
+```js
+{
     default: {
         eslint: '8.10.0',
         'eslint-config-prettier': '8.5.0',
@@ -72,38 +73,32 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
     svelte3: {
         'eslint-plugin-svelte3': '3.4.1',
     },
-}</pre>
-    </code>
+}
+```
 </details>
+
 <details>
-    <summary>Update vscode settings.json</summary>
-    <ul>
-       <li> 
-            Windows: ${userHomeDir}/AppData/Roaming/Code/User/settings.json
-        </li>
-        <li>
-            Linux: ${userHomeDir}/.config/Code/User/settings.json
-        </li>
-    </ul>
-    <p>
-        Auto run eslint --fix when save file(*press ctrl + s*)
-    </p>
-    <code>
-        <pre>
+<summary>Update vscode settings.json</summary>
+
+* Windows: ${userHomeDir}/AppData/Roaming/Code/User/settings.json
+* Linux: ${userHomeDir}/.config/Code/User/settings.json
+
+Auto run eslint --fix when save file(*press ctrl + s*)
+
+```json
 "editor.codeActionsOnSave": {
   "source.fixAll.eslint": true
 }
-        </pre>
-    </code>
-    <p>when select svelte3</p>
-    <code>
-        <pre>
+```
+    
+when select ```svelte3```
+
+```json
 "eslint.validate": [
     "javascript",
     "svelte"
 ],
-        </pre>
-    </code>
+```
 </details>
 
 ## Pass the test on the following platforms
