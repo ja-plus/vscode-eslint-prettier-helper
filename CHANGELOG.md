@@ -1,5 +1,6 @@
 ## 1.4.1
 * fix: remove svelte3 prettier config, prettier npm packages
+* add:` @babel/eslint-parser` to support jsx (`vue2` / `vue3`)
 ## 1.4.0
 * add: svelte3 support. (Not use prettier)
 ## 1.3.2
