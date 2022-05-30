@@ -1,7 +1,12 @@
 ## 1.4.2
+* change: default prettier config tabWidth: 4 -> 2
+* add: default eslint config:
+    * 'no-new-object': 1
+    * 'object-shorthand': 1
+* upgrade: `@babel/eslint-parser@7.17.0` -> `@babel/eslint-parser@7.18.2`
 ## 1.4.1
 * fix: remove svelte3 prettier config, prettier npm packages
-* add:` @babel/eslint-parser` to support jsx (`vue2` / `vue3`)
+* add: `@babel/eslint-parser` to support jsx (`vue2` / `vue3`)
 ## 1.4.0
 * add: svelte3 support. (Not use prettier)
 ## 1.3.2
