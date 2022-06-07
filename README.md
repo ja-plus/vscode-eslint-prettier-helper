@@ -1,4 +1,6 @@
 # vscode-eslint-prettier-helper
+一键配置vscode eslint prettier 环境
+
 Automatically configure `Visual Studio Code` eslint + prettier code formatter
 
 ## Usage | 使用方式
