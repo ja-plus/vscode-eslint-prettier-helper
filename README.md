@@ -42,45 +42,45 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 <summary>Npm install eslint prettier packages | 安装eslint prettier npm依赖</summary>
 
 ```js
-{
-    eslint: {
-        eslint: '8.10.0',
-        'eslint-plugin-html': '6.2.0',
+ eslint: {
+      eslint: '8.10.0',
+      'eslint-plugin-html': '6.2.0',
     },
     prettier: {
-        prettier: '2.5.1',
-        'eslint-config-prettier': '8.5.0',
-        'eslint-plugin-prettier': '4.0.0',
+      prettier: '2.5.1',
+      'eslint-config-prettier': '8.5.0',
+      'eslint-plugin-prettier': '4.0.0',
     },
     js: {},
     ts: {
-        '@typescript-eslint/eslint-plugin': '5.14.0',
-        '@typescript-eslint/parser': '5.14.0',
+      '@typescript-eslint/eslint-plugin': '5.14.0',
+      '@typescript-eslint/parser': '5.14.0',
     },
     vue2: {
-        '@babel/eslint-parser': '7.17.0',
-        'eslint-plugin-vue': '8.5.0',
+      '@babel/core': '7.18.2',
+      '@babel/eslint-parser': '7.18.2',
+      'eslint-plugin-vue': '8.5.0',
     },
     vue3: {
-        '@babel/eslint-parser': '7.17.0',
-        'eslint-plugin-vue': '8.5.0',
+      '@babel/core': '7.18.2',
+      '@babel/eslint-parser': '7.18.2',
+      'eslint-plugin-vue': '8.5.0',
     },
     'vue2-ts': {
-        'eslint-plugin-vue': '8.5.0',
-        '@typescript-eslint/eslint-plugin': '5.14.0',
-        '@typescript-eslint/parser': '5.14.0',
-        '@vue/eslint-config-typescript': '8.0.0',
+      'eslint-plugin-vue': '8.5.0',
+      '@typescript-eslint/eslint-plugin': '5.14.0',
+      '@typescript-eslint/parser': '5.14.0',
+      '@vue/eslint-config-typescript': '8.0.0',
     },
     'vue3-ts': {
-        'eslint-plugin-vue': '8.5.0',
-        '@typescript-eslint/eslint-plugin': '5.14.0',
-        '@typescript-eslint/parser': '5.14.0',
-        '@vue/eslint-config-typescript': '8.0.0',
+      'eslint-plugin-vue': '8.5.0',
+      '@typescript-eslint/eslint-plugin': '5.14.0',
+      '@typescript-eslint/parser': '5.14.0',
+      '@vue/eslint-config-typescript': '8.0.0',
     },
     svelte3: {
-        'eslint-plugin-svelte3': '3.4.1',
+      'eslint-plugin-svelte3': '3.4.1',
     },
-}
 ```
 </details>
 

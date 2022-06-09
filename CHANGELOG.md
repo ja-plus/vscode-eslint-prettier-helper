@@ -4,6 +4,7 @@
     * 'no-new-object': 1
     * 'object-shorthand': 1
 * upgrade: `@babel/eslint-parser@7.17.0` -> `@babel/eslint-parser@7.18.2`
+* add: `@babel/core@'7.18.2`, eslint.rc  `requireConfigFile: false`. when use `@babel/eslint-parser`
 ## 1.4.1
 * fix: remove svelte3 prettier config, prettier npm packages
 * add: `@babel/eslint-parser` to support jsx (`vue2` / `vue3`)
