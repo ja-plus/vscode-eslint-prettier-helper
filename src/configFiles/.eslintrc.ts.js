@@ -15,7 +15,7 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 1,
-    'spaced-comment': 1, // 注释斜杠后空格
+    // 'spaced-comment': 1, // 注释斜杠后空格
     'new-cap': 1, // 构造函数首字母大写
     eqeqeq: 1, // 使用 ===
     'dot-notation': 1, // 强制使用.不用[]

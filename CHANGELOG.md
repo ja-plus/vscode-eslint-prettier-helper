@@ -1,3 +1,5 @@
+## 1.4.3
+* remove: eslint.rc `'spaced-comment': 1` when use typescript.
 ## 1.4.2
 * change: default prettier config tabWidth: 4 -> 2
 * add: default eslint config:
