@@ -45,13 +45,11 @@ module.exports = {
       '@typescript-eslint/parser': '5.14.0',
     },
     vue2: {
-      '@babel/core': '7.18.2',
-      '@babel/eslint-parser': '7.18.2',
+      'vue-eslint-parser': '9.0.2',
       'eslint-plugin-vue': '8.5.0',
     },
     vue3: {
-      '@babel/core': '7.18.2',
-      '@babel/eslint-parser': '7.18.2',
+      'vue-eslint-parser': '9.0.2',
       'eslint-plugin-vue': '8.5.0',
     },
     'vue2-ts': {

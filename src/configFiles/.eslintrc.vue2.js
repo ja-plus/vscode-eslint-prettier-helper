@@ -6,11 +6,13 @@ module.exports = {
     es2021: true,
     node: true,
   },
+  parser: 'vue-eslint-parser',
   parserOptions: {
-    parser: '@babel/eslint-parser',
     ecmaVersion: 'latest',
     sourceType: 'module',
-    requireConfigFile: false,
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   plugins: ['html', 'vue', 'prettier'],
   extends: ['eslint:recommended', 'plugin:vue/recommended', 'plugin:prettier/recommended'],

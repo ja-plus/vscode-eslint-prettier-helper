@@ -1,5 +1,7 @@
 ## 1.4.3
 * remove: eslint.rc `'spaced-comment': 1` when use typescript.
+* add: use `vue-eslint-parser` parser in (`vue2` / `vue3`) eslint config file
+* remove: prettierrc.js config : `semi: false` (default: true)
 ## 1.4.2
 * change: default prettier config tabWidth: 4 -> 2
 * add: default eslint config:
