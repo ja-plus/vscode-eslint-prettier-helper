@@ -1,3 +1,4 @@
+## 1.4.4
 ## 1.4.3
 * remove: eslint.rc `'spaced-comment': 1` when use typescript.
 * add: use `vue-eslint-parser` parser in (`vue2` / `vue3`) eslint config file
