@@ -15,6 +15,7 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:vue/recommended', '@vue/typescript/recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 1,
+    'vue/setup-compiler-macros': true, // vue2.7
     'vue/multi-word-component-names': 1, // 组件名称多个字符，更改为1警告
     '@typescript-eslint/no-empty-function': 1, // 不能有空方法，改为1警告
     '@typescript-eslint/no-var-requires': 0, // 解决vue.config.js中require语法的报错
@@ -26,4 +27,4 @@ module.exports = {
     'no-new-object': 1, // 使用字面量创建对象 非new Object()
     'object-shorthand': 1, // 对象方法属性值缩写
   },
-}
+};
