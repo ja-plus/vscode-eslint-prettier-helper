@@ -5,6 +5,7 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
+    'vue/setup-compiler-macros': true, // vue2.7
   },
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -15,7 +16,6 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:vue/recommended', '@vue/typescript/recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 1,
-    'vue/setup-compiler-macros': true, // vue2.7
     'vue/multi-word-component-names': 1, // 组件名称多个字符，更改为1警告
     '@typescript-eslint/no-empty-function': 1, // 不能有空方法，改为1警告
     '@typescript-eslint/no-var-requires': 0, // 解决vue.config.js中require语法的报错

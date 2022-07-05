@@ -17,7 +17,7 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 * vue2 + ts
 * vue3 + ts
 * svelte3 (not support prettier)
-## What will do | 这个插件会做什么
+## What will do | 它会做什么
 
 <details>
 <summary>Install vscode extensions | 安装vscode扩展</summary>

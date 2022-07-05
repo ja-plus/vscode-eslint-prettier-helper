@@ -45,21 +45,21 @@ module.exports = {
       '@typescript-eslint/parser': '5.14.0',
     },
     vue2: {
-      'vue-eslint-parser': '9.0.2',
-      'eslint-plugin-vue': '8.5.0',
+      'vue-eslint-parser': '9.0.3',
+      'eslint-plugin-vue': '9.1.1',
     },
     vue3: {
-      'vue-eslint-parser': '9.0.2',
-      'eslint-plugin-vue': '8.5.0',
+      'vue-eslint-parser': '9.0.3',
+      'eslint-plugin-vue': '9.1.1',
     },
     'vue2-ts': {
-      'eslint-plugin-vue': '8.5.0',
+      'eslint-plugin-vue': '9.1.1',
       '@typescript-eslint/eslint-plugin': '5.14.0',
       '@typescript-eslint/parser': '5.14.0',
       '@vue/eslint-config-typescript': '8.0.0',
     },
     'vue3-ts': {
-      'eslint-plugin-vue': '8.5.0',
+      'eslint-plugin-vue': '9.1.1',
       '@typescript-eslint/eslint-plugin': '5.14.0',
       '@typescript-eslint/parser': '5.14.0',
       '@vue/eslint-config-typescript': '8.0.0',

@@ -5,6 +5,7 @@ module.exports = {
     browser: true,
     es2021: true,
     node: true,
+    'vue/setup-compiler-macros': true, // vue2.7
   },
   parser: 'vue-eslint-parser',
   parserOptions: {
@@ -18,7 +19,6 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:vue/recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 1,
-    'vue/setup-compiler-macros': true, // vue2.7
     'spaced-comment': 1, // 注释斜杠后空格
     'new-cap': 1, // 构造函数首字母大写
     eqeqeq: 1, // 使用 ===
