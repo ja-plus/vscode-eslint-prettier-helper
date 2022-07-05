@@ -6,6 +6,7 @@ module.exports = {
     es2021: true,
     node: true,
   },
+  parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
     ecmaVersion: 'latest',
@@ -25,4 +26,4 @@ module.exports = {
     'no-new-object': 1, // 使用字面量创建对象 非new Object()
     'object-shorthand': 1, // 对象方法属性值缩写
   },
-}
+};

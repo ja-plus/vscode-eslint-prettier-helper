@@ -7,6 +7,7 @@ module.exports = {
     node: true,
     'vue/setup-compiler-macros': true, // vue2.7
   },
+  parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
     ecmaVersion: 'latest',

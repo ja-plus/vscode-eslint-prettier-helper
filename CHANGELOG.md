@@ -1,6 +1,7 @@
 ## 1.4.5
 * add: version log
 * add: `chalk` highlight log
+* add: use `vue-eslint-parser` parser in (`vue2-ts` / `vue3-ts`) eslint config file
 ## 1.4.4
 * support vue2.7 setup macros `defineProps` `defineEmits` `defineExpose` `withDefaults`
 * upgrade dependencies `eslint-plugin-vue` `vue-eslint-parser`
