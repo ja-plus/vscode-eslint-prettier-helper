@@ -1,3 +1,4 @@
+## 1.4.5
 ## 1.4.4
 * support vue2.7 setup macros `defineProps` `defineEmits` `defineExpose` `withDefaults`
 * upgrade dependencies `eslint-plugin-vue` `vue-eslint-parser`
