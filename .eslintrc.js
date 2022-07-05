@@ -37,4 +37,4 @@ module.exports = {
     'object-shorthand': 1, // 对象方法属性值缩写
     // 'prefer-destructuring':1, //使用解构赋值来获取属性值
   },
-}
+};

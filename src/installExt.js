@@ -2,32 +2,32 @@
  * Install vscode extension by vscode cli
  * @author JA+
  */
-const childProcess = require('child_process')
-const path = require('path')
-const fs = require('fs')
-const { typeExtMapper, codeExt } = require('./config')
+const childProcess = require('child_process');
+const path = require('path');
+const fs = require('fs');
+const { typeExtMapper, codeExt } = require('./config');
 
-const extFileNames = fs.readdirSync(path.resolve(__dirname, './vscodeExts'))
+const extFileNames = fs.readdirSync(path.resolve(__dirname, './vscodeExts'));
 
 // console.log('Checks whether the VScode ESLint plugin is installed')
-let installedExts = childProcess.execSync('code --list-extensions --show-versions')
-installedExts = installedExts.toString().split('\n')
+let installedExts = childProcess.execSync('code --list-extensions --show-versions');
+installedExts = installedExts.toString().split('\n');
 
 /**
  * @param {string} extName
  */
 function installVscodeExtension(extName) {
-  console.log(`Installing vscode plugin ${extName}...`)
+  console.log(`Installing vscode plugin ${extName}...`);
   try {
     // find extension .vsix file
-    const vsixName = extFileNames.find(str => str.startsWith(extName))
+    const vsixName = extFileNames.find(str => str.startsWith(extName));
     // if exist .vsix file ,use it. if not, auto download in vscode extension market
-    let cmd = 'code --install-extension ' + (vsixName ? path.resolve(__dirname, './vscodeExts/', vsixName) : extName)
-    childProcess.execSync(cmd)
-    console.log(`✔ Vscode plugin(${extName}) installation succeeded`)
+    let cmd = 'code --install-extension ' + (vsixName ? path.resolve(__dirname, './vscodeExts/', vsixName) : extName);
+    childProcess.execSync(cmd);
+    console.log(`✔ Vscode plugin(${extName}) installation succeeded`);
   } catch (err) {
     // maybe network error
-    console.log('✘ Install vscode plugin failed: ' + err)
+    console.log('✘ Install vscode plugin failed: ' + err);
   }
 }
 /**
@@ -36,36 +36,36 @@ function installVscodeExtension(extName) {
  */
 function checkExtension(type) {
   typeExtMapper[type].forEach(exts => {
-    const codeExtItem = codeExt[exts]
+    const codeExtItem = codeExt[exts];
     // get installedName
-    const installedExt = installedExts.find(str => str.startsWith(codeExtItem.name))
+    const installedExt = installedExts.find(str => str.startsWith(codeExtItem.name));
     if (installedExt) {
-      const installedExtVersion = installedExt.split('@')[1]
+      const installedExtVersion = installedExt.split('@')[1];
       // check installed extension's version
       if (installedExtVersion < codeExtItem.validVersion) {
-        console.warn(`Installed plugin version is too early(${installedExt})`)
-        installVscodeExtension(codeExtItem.name)
+        console.warn(`Installed plugin version is too early(${installedExt})`);
+        installVscodeExtension(codeExtItem.name);
       } else {
-        console.log('✔ Installed vscode plugin:', installedExt, '. Auto skip this stage')
+        console.log('✔ Installed vscode plugin:', installedExt, '. Auto skip this stage');
       }
     } else {
-      installVscodeExtension(codeExtItem.name)
+      installVscodeExtension(codeExtItem.name);
     }
-  })
+  });
 }
 /**
  *
  * @param {{type:string}}} param0
  */
 module.exports = function ({ type }) {
-  checkExtension('eslint')
-  checkExtension(type)
+  checkExtension('eslint');
+  checkExtension(type);
   if (type.startsWith('vue')) {
     let clgMap = {
       vue2: '■ Please disable volar and enable vetur.',
       vue3: '■ Please disable vetur and enable volar.',
-    }
-    console.log(clgMap[type.substring(0, 4)])
-    console.log('■ If eslint not work with vue-cli, Try to remove @vue/cli-plugin-eslint')
+    };
+    console.log(clgMap[type.substring(0, 4)]);
+    console.log('■ If eslint not work with vue-cli, Try to remove @vue/cli-plugin-eslint');
   }
-}
+};

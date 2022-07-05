@@ -84,4 +84,4 @@ module.exports = {
       'eslint.validate': ['javascript', 'svelte'],
     },
   },
-}
+};
