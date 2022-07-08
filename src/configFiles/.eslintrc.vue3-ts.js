@@ -23,6 +23,7 @@ module.exports = {
     'dot-notation': 1, // 强制使用.不用[]
     // 'no-debugger': 0,
     // 'no-console': 0,
+    // 'no-undef': 0,
     'no-new-object': 1, // 使用字面量创建对象 非new Object()
     'object-shorthand': 1, // 对象方法属性值缩写
   },
