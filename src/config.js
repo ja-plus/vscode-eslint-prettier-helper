@@ -11,6 +11,7 @@ module.exports = {
   typeExtMapper: {
     eslint: ['eslint'],
     js: [],
+    ts: [],
     vue2: ['vetur'],
     vue3: ['volar'],
     'vue2-ts': ['vetur'],

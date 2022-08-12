@@ -1,3 +1,5 @@
+## 1.4.6
+* fix: select `ts` and operation error
 ## 1.4.5
 * add: version log
 * add: `chalk` highlight log

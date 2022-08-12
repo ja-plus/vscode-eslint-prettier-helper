@@ -35,6 +35,7 @@ function installVscodeExtension(extName) {
  * @param {string} type selected env type
  */
 function checkExtension(type) {
+  if (!typeExtMapper[type]) return;
   typeExtMapper[type].forEach(exts => {
     const codeExtItem = codeExt[exts];
     // get installedName
