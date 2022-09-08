@@ -89,7 +89,7 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 * Windows: ${userHomeDir}/AppData/Roaming/Code/User/settings.json
 * Linux: ${userHomeDir}/.config/Code/User/settings.json
 
-Auto run eslint --fix when save file(*press ctrl + s*)
+Auto run eslint --fix when save file(*press ctrl + s*) | 保存代码时，自动格式化代码
 
 ```json
 "editor.codeActionsOnSave": {
@@ -107,7 +107,7 @@ when select `svelte3`
 ```
 </details>
 
-## Pass the test on the following platforms | 测过的系统
+## Pass the test on the following platforms | 试过的系统
 ### Win7、Win10
 > vscode > 1.60 (which can install the supported eslint plugin2.2.3)  
 > node 12.22.9
@@ -117,6 +117,10 @@ when select `svelte3`
 
 ## ps
 * vscode eslint plugin < 2.2.0 not support eslint@8  
-* If it not work in vue-cli@4, Try `npm remove @vue/cli-plugin-eslint babel-eslint`, and remove eslint config in `package.json` if exist.
-* Needn't install vscode `prettier extension` | 不需要安装vscode的prettier扩展
-* After modify the prettierrc.js, we need restart eslint | 修改prettierrc.js配置后，请重启eslint 插件使其生效 (Press F1, and select `ESLint: Restart ESLint Server`) 
+| vscode eslint插件版本< 2.2.0 则不支持eslint@8
+* If it not work in vue-cli@4, Try `npm remove @vue/cli-plugin-eslint babel-eslint`, and remove eslint config in `package.json` if exist.  
+| 如果在vue-cli中不生效，则尝试移除`@vue/cli-plugin-eslint babel-eslint`。package.json中，如有eslint配置，请删除。
+* Needn't install vscode `prettier extension`  
+| 不需要安装vscode的prettier扩展
+* After modify the prettierrc.js, we need restart eslint  
+| 修改prettierrc.js配置后，请重启eslint 插件使其生效 (Press F1, and select `ESLint: Restart ESLint Server`) 

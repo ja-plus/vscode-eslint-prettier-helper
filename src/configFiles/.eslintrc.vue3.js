@@ -18,6 +18,7 @@ module.exports = {
   extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 1,
+    'prefer-const': 1, // 未重新赋值的变量自动转换成const
     'spaced-comment': 1, // 注释斜杠后空格
     'new-cap': 1, // 构造函数首字母大写
     eqeqeq: 1, // 使用 ===
@@ -27,4 +28,4 @@ module.exports = {
     'no-new-object': 1, // 使用字面量创建对象 非new Object()
     'object-shorthand': 1, // 对象方法属性值缩写
   },
-}
+};
