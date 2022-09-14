@@ -41,6 +41,9 @@ module.exports = {
       '@babel/core': '7.18.10',
       '@babel/eslint-parser': '7.18.9',
     },
+    tsBase: {
+      typescript: 'latest',
+    },
     ts: {
       '@typescript-eslint/eslint-plugin': '5.32.0',
       '@typescript-eslint/parser': '5.32.0',
