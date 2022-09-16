@@ -86,6 +86,13 @@ module.exports = {
         'source.fixAll.eslint': true,
       },
     },
+    ts: {},
+    'vue2-ts': {
+      'eslint.validate': ['typescriptreact'], // support tsx
+    },
+    'vue3-ts': {
+      'eslint.validate': ['typescriptreact'], // support tsx
+    },
     svelte3: {
       'eslint.validate': ['javascript', 'svelte'],
     },

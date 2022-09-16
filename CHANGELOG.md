@@ -1,6 +1,7 @@
 ## 1.4.7
 * add `'prefer-const': 1` in `js`,`vue2`,`vue3`、
 * question npm install `typescript` when selected contain `ts` 
+* add vscode setting:`'eslint.validate': ['typescriptreact']` to support `tsx` file validate
 ## 1.4.6
 * fix: select `ts` and operation error
 ## 1.4.5
