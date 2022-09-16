@@ -1,7 +1,9 @@
 ## 1.4.7
-* add `'prefer-const': 1` in `js`,`vue2`,`vue3`、
-* question npm install `typescript` when selected contain `ts` 
-* add vscode setting:`'eslint.validate': ['typescriptreact']` to support `tsx` file validate
+* add: `'prefer-const': 1` in `js`,`vue2`,`vue3`、
+* add: question npm install `typescript` when selected contain `ts` 
+* add: vscode setting:`'eslint.validate': ['typescriptreact']` to support `tsx` file validate
+* add: eslint config `'no-unused-vars': [1, { argsIgnorePattern: 'h' }]` in `vue2`,`vue3`
+* add: eslint config `'@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: 'h' }]` in `vue2-ts`,`vue3-ts`
 ## 1.4.6
 * fix: select `ts` and operation error
 ## 1.4.5
