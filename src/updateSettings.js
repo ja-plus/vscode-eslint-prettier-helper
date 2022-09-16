@@ -5,8 +5,7 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const config = require('./config');
-const { settingFilePath } = require('./config');
+const { settingFilePath, settingConfig } = require('./config');
 const platform = os.platform();
 
 /**
@@ -15,7 +14,7 @@ const platform = os.platform();
  * @param {object} settingJson
  */
 function updateSettings(type, settingJson) {
-  let settingCfg = config.settingConfig[type];
+  let settingCfg = settingConfig[type];
   if (!settingCfg) return;
 
   for (const key in settingCfg) {
