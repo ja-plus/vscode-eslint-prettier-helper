@@ -4,6 +4,8 @@
 * add: vscode setting:`'eslint.validate': ['typescriptreact']` to support `tsx` file validate
 * add: eslint config `'no-unused-vars': [1, { argsIgnorePattern: 'h' }]` in `vue2`,`vue3`
 * add: eslint config `'@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: 'h' }]` in `vue2-ts`,`vue3-ts`
+* add: check if typescript installed when select about `ts`
+* optimize: log color
 ## 1.4.6
 * fix: select `ts` and operation error
 ## 1.4.5

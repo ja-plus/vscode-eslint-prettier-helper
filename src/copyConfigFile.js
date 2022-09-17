@@ -8,6 +8,7 @@ const path = require('path');
 const { promisify } = require('util');
 const copyFile = promisify(fs.copyFile);
 const inquirer = require('inquirer');
+const myLog = require('./myLog');
 const prompt = inquirer.createPromptModule();
 
 /**
@@ -33,7 +34,7 @@ function copyFileWrapper(sourceFileName, targetFileName = sourceFileName) {
     });
   } else {
     prom = copyFile(path.resolve(__dirname, 'configFiles', sourceFileName), targetFileName).then(() => {
-      console.log('Create File: ', chalk.green(targetFileName));
+      myLog.log('Create File: ', chalk.green(targetFileName));
     });
   }
   return prom;
@@ -55,8 +56,8 @@ module.exports = async function ({ type }) {
     // copy jsconfig.json
     if (['vue2', 'vue3'].includes(type)) await copyFileWrapper('jsconfig.json');
 
-    console.log('✔ Copying config files succeed');
+    myLog.success('Copying config files succeed');
   } catch (err) {
-    console.error('✘ Copying file err.', err);
+    myLog.danger('Copying file err.', err);
   }
 };

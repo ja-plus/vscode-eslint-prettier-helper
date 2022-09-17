@@ -6,6 +6,7 @@ const fs = require('fs');
 const os = require('os');
 const path = require('path');
 const { settingFilePath, settingConfig } = require('./config');
+const myLog = require('./myLog');
 const platform = os.platform();
 
 /**
@@ -45,7 +46,7 @@ module.exports = function ({ type }) {
       throw new Error('Did not fit your platform(' + platform + ').');
     }
     const filePath = path.join(os.homedir(), settingFilePath[platform]);
-    console.log('File path: ', filePath);
+    myLog.log('File path: ', filePath);
 
     const data = fs.readFileSync(filePath);
     let settingsStr = data.toString();
@@ -60,10 +61,10 @@ module.exports = function ({ type }) {
     updateSettings(type, settingsObj);
 
     fs.writeFileSync(filePath, JSON.stringify(settingsObj, null, 2));
-    console.log('✔ Vscode settings.json updated');
+    myLog.success('Vscode settings.json updated');
     // console.log('✔ Vscode settings.json has been set. Auto skip this stage')
   } catch (err) {
-    console.error('✘ Update settings.json failed.', err);
-    console.error('■ Set settings.json by yourself');
+    myLog.danger('Update settings.json failed.', err);
+    myLog.tip('Set settings.json by yourself');
   }
 };

@@ -8,6 +8,7 @@ const pkg = require('../package.json');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const { promptChoices, minCodeVersion } = require('./config.js');
+const myLog = require('./myLog');
 const prompt = inquirer.createPromptModule();
 
 let vscodeVersion = childProcess.execSync('code --version').toString();
@@ -40,24 +41,24 @@ prompt(promptParams).then(async answer => {
   if (answer.invalidVersion === false) return;
 
   try {
-    console.log('\n► Start Installing vscode extension.');
+    myLog.start('Start Installing vscode extension.');
     require('./installExt.js')(answer);
 
     // update settings.json
-    console.log('\n► Vscode settings.json add configuration...');
+    myLog.start('Vscode settings.json add configuration...');
     require('./updateSettings.js')(answer);
 
-    console.log('\n► Copying config files...');
+    myLog.start('Copying config files...');
     await require('./copyConfigFile.js')(answer);
 
-    console.log('\n► Installing npm packages...');
+    myLog.start('Installing npm packages...');
     await require('./installNpmPkgs.js')(answer);
 
-    console.log('\n✔ All task done. Please restart vscode( / Restart eslint plugin / Reload require). Make effective eslint.');
-    console.log(
-      '\n? Did not come into effect? Make sure the folder that vscode opened, which has the config file and node_modules in root directory.',
+    myLog.success('All task done. Please restart vscode( / Restart eslint plugin / Reload require). Make effective eslint.');
+    myLog.tip(
+      'Did not come into effect? Make sure the folder that vscode opened, which has the config file and node_modules in root directory.',
     );
   } catch (err) {
-    console.error(err);
+    myLog.danger(err);
   }
 });
