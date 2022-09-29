@@ -31,7 +31,7 @@ promptParams.push({
   default: 'js',
   name: 'type',
   message: 'Select env:',
-  choices: promptChoices,
+  choices: Object.keys(promptChoices),
   when(answer) {
     return answer.invalidVersion === undefined || answer.invalidVersion === true;
   },
@@ -39,7 +39,7 @@ promptParams.push({
 
 prompt(promptParams).then(async answer => {
   if (answer.invalidVersion === false) return;
-
+  answer.type = promptChoices[answer.type]; // key转换成value
   try {
     myLog.start('Start Installing vscode extension.');
     require('./installExt.js')(answer);

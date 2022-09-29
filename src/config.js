@@ -5,8 +5,19 @@
 module.exports = {
   /** valid vscode version */
   minCodeVersion: '1.60.0',
-  /** inquirer choices */
-  promptChoices: ['js', 'vue2', 'vue3', 'ts', 'vue2-ts', 'vue3-ts', 'svelte3'],
+  /**
+   * inquirer choices
+   * label - value
+   */
+  promptChoices: {
+    js: 'js',
+    vue2: 'vue2',
+    vue3: 'vue3',
+    ts: 'ts',
+    'vue2-ts': 'vue2-ts',
+    'vue3-ts': 'vue2-ts',
+    'svelte3(test)': 'svelte3',
+  },
   /** type -> vscode extensions */
   typeExtMapper: {
     eslint: ['eslint'],
@@ -22,13 +33,13 @@ module.exports = {
   codeExt: {
     eslint: { name: 'dbaeumer.vscode-eslint', validVersion: '2.2.0' },
     vetur: { name: 'octref.vetur', validVersion: '0.34.1' },
-    volar: { name: 'johnsoncodehk.volar', validVersion: '0.33.2' },
+    volar: { name: 'Vue.volar', validVersion: '0.33.2' },
     svelte: { name: 'svelte.svelte-vscode', validVersion: '105.10.0' },
   },
   // ---npm packages
   npmPkgs: {
     eslint: {
-      eslint: '8.21.0',
+      eslint: '8.24.0',
       'eslint-plugin-html': '7.1.0',
     },
     prettier: {
@@ -49,23 +60,23 @@ module.exports = {
       '@typescript-eslint/parser': '5.32.0',
     },
     vue2: {
-      'vue-eslint-parser': '9.0.3',
-      'eslint-plugin-vue': '9.3.0',
+      'vue-eslint-parser': '9.1.0',
+      'eslint-plugin-vue': '9.5.1',
     },
     vue3: {
-      'vue-eslint-parser': '9.0.3',
-      'eslint-plugin-vue': '9.3.0',
+      'vue-eslint-parser': '9.1.0',
+      'eslint-plugin-vue': '9.5.1',
     },
     'vue2-ts': {
-      'vue-eslint-parser': '9.0.3',
-      'eslint-plugin-vue': '9.3.0',
+      'vue-eslint-parser': '9.1.0',
+      'eslint-plugin-vue': '9.5.1',
       '@typescript-eslint/eslint-plugin': '5.32.0',
       '@typescript-eslint/parser': '5.32.0',
       '@vue/eslint-config-typescript': '8.0.0',
     },
     'vue3-ts': {
-      'vue-eslint-parser': '9.0.3',
-      'eslint-plugin-vue': '9.3.0',
+      'vue-eslint-parser': '9.1.0',
+      'eslint-plugin-vue': '9.5.1',
       '@typescript-eslint/eslint-plugin': '5.32.0',
       '@typescript-eslint/parser': '5.32.0',
       '@vue/eslint-config-typescript': '8.0.0',

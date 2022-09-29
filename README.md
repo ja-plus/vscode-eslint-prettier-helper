@@ -43,7 +43,7 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 
 ```js
   eslint: {
-    eslint: '8.21.0',
+    eslint: '8.24.0',
     'eslint-plugin-html': '7.1.0',
   },
   prettier: {
@@ -51,28 +51,31 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
     'eslint-config-prettier': '8.5.0',
     'eslint-plugin-prettier': '4.2.1',
   },
+  tsBase: {
+    typescript: 'latest',
+  },
   ts: {
     '@typescript-eslint/eslint-plugin': '5.32.0',
     '@typescript-eslint/parser': '5.32.0',
   },
   vue2: {
-    'vue-eslint-parser': '9.0.3',
-    'eslint-plugin-vue': '9.3.0',
+    'vue-eslint-parser': '9.1.0',
+    'eslint-plugin-vue': '9.5.1',
   },
   vue3: {
-    'vue-eslint-parser': '9.0.3',
-    'eslint-plugin-vue': '9.3.0',
+    'vue-eslint-parser': '9.1.0',
+    'eslint-plugin-vue': '9.5.1',
   },
   'vue2-ts': {
-    'vue-eslint-parser': '9.0.3',
-    'eslint-plugin-vue': '9.3.0',
+    'vue-eslint-parser': '9.1.0',
+    'eslint-plugin-vue': '9.5.1',
     '@typescript-eslint/eslint-plugin': '5.32.0',
     '@typescript-eslint/parser': '5.32.0',
     '@vue/eslint-config-typescript': '8.0.0',
   },
   'vue3-ts': {
-    'vue-eslint-parser': '9.0.3',
-    'eslint-plugin-vue': '9.3.0',
+    'vue-eslint-parser': '9.1.0',
+    'eslint-plugin-vue': '9.5.1',
     '@typescript-eslint/eslint-plugin': '5.32.0',
     '@typescript-eslint/parser': '5.32.0',
     '@vue/eslint-config-typescript': '8.0.0',
