@@ -13,12 +13,7 @@ const prompt = inquirer.createPromptModule();
 module.exports = async function ({ type }) {
   let npmCmd = 'npm i -D --legacy-peer-deps';
 
-  const pkgTypes = ['eslint'];
-  if (type !== 'svelte3') {
-    // svelte not support prettier
-    pkgTypes.push('prettier');
-  }
-  pkgTypes.push(type);
+  const pkgTypes = ['eslint', 'prettier', type];
 
   if (await checkTypescriptVersion(type)) {
     pkgTypes.push('tsBase'); // 基本ts依赖

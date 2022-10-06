@@ -47,11 +47,9 @@ module.exports = async function ({ type }) {
     await copyFileWrapper(`.eslintrc.${type}.js`, '.eslintrc.js');
     await copyFileWrapper('.eslintignore');
 
-    if (type !== 'svelte3') {
-      // copy prettier file
-      await copyFileWrapper('.prettierrc.js');
-      await copyFileWrapper('.prettierignore');
-    }
+    // copy prettier file
+    await copyFileWrapper('.prettierrc.js');
+    await copyFileWrapper('.prettierignore');
 
     // copy jsconfig.json
     if (['vue2', 'vue3'].includes(type)) await copyFileWrapper('jsconfig.json');

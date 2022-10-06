@@ -1,6 +1,7 @@
-## 1.4.8
+## 1.5.0
 * update: update dep `eslint`,`vue-eslint-parser`,`eslint-plugin-vue`,
 * update: vscode ext `volar`,change id: `Vue.volar`
+* add: `svelte3` support prettier !.
 ## 1.4.7
 * add: `'prefer-const': 1` in `js`,`vue2`,`vue3`、
 * add: question npm install `typescript` when selected contain `ts` 

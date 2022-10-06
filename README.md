@@ -6,7 +6,7 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 ## Usage | 使用方式
 > npx vscode-eslint-prettier-helper  
 > **or install first**  
-> npm i vscode-eslint-prettier-helper -g  
+> npm i vscode-eslint-prettier-helper  
 > npx veph
 
 ## Support | 支持环境
@@ -16,7 +16,7 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 * vue3
 * vue2 + ts
 * vue3 + ts
-* svelte3 (not support prettier)
+* svelte3
 ## What will do | 它会做什么
 
 <details>
@@ -35,7 +35,7 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 * .eslintignore 
 * .prettier.js
 * .prettierignore
-* jsconfig.json [`vue2`, [`vue3`] //  This file make vscode recognize '@' alias 
+* jsconfig.json [`vue2`, `vue3`] //  This file make vscode recognize '@' alias 
 </details>
 
 <details>
@@ -81,7 +81,8 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
     '@vue/eslint-config-typescript': '8.0.0',
   },
   svelte3: {
-    'eslint-plugin-svelte3': '4.0.0',
+    'eslint-plugin-svelte': '2.10.0',
+    'prettier-plugin-svelte': '2.7.1',
   },
 ```
 </details>
@@ -110,13 +111,7 @@ when select `svelte3`
 ```
 </details>
 
-## Pass the test on the following platforms | 试过的系统
-### Win7、Win10
-> vscode > 1.60 (which can install the supported eslint plugin2.2.3)  
-> node 12.22.9
-### Linux (deepin 20.4)
-> vscode 1.65  
-> node 14.16.1
+## VS Code 版本和node版本尽量新
 
 ## ps
 * vscode eslint plugin < 2.2.0 not support eslint@8  

@@ -15,8 +15,8 @@ module.exports = {
     vue3: 'vue3',
     ts: 'ts',
     'vue2-ts': 'vue2-ts',
-    'vue3-ts': 'vue2-ts',
-    'svelte3(test)': 'svelte3',
+    'vue3-ts': 'vue3-ts',
+    svelte3: 'svelte3',
   },
   /** type -> vscode extensions */
   typeExtMapper: {
@@ -82,7 +82,8 @@ module.exports = {
       '@vue/eslint-config-typescript': '8.0.0',
     },
     svelte3: {
-      'eslint-plugin-svelte3': '4.0.0',
+      'eslint-plugin-svelte': '2.10.0',
+      'prettier-plugin-svelte': '2.7.1',
     },
   },
   // platform - settings.json path
