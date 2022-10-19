@@ -16,6 +16,7 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 * vue3
 * vue2 + ts
 * vue3 + ts
+* react(Beta)
 * svelte3
 ## What will do | 它会做什么
 
@@ -79,6 +80,9 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
     '@typescript-eslint/eslint-plugin': '5.32.0',
     '@typescript-eslint/parser': '5.32.0',
     '@vue/eslint-config-typescript': '8.0.0',
+  },
+  react:{
+    'eslint-plugin-react': '7.31.10',
   },
   svelte3: {
     'eslint-plugin-svelte': '2.10.0',
