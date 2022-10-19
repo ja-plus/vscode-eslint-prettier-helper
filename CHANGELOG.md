@@ -1,3 +1,5 @@
+## 1.5.1
+* add: support `react`
 ## 1.5.0
 * update: update dep `eslint`,`vue-eslint-parser`,`eslint-plugin-vue`,
 * update: vscode ext `volar`,change id: `Vue.volar`

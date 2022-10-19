@@ -16,6 +16,7 @@ module.exports = {
     ts: 'ts',
     'vue2-ts': 'vue2-ts',
     'vue3-ts': 'vue3-ts',
+    'react(Beta)': 'react',
     svelte3: 'svelte3',
   },
   /** type -> vscode extensions */
@@ -80,6 +81,13 @@ module.exports = {
       '@typescript-eslint/eslint-plugin': '5.32.0',
       '@typescript-eslint/parser': '5.32.0',
       '@vue/eslint-config-typescript': '8.0.0',
+    },
+    react: {
+      'eslint-plugin-react': '7.31.10',
+    },
+    'react-ts': {
+      '@typescript-eslint/eslint-plugin': '5.32.0',
+      '@typescript-eslint/parser': '5.32.0',
     },
     svelte3: {
       'eslint-plugin-svelte': '2.10.0',
