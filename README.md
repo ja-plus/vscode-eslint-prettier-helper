@@ -25,7 +25,7 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 
 * dbaeumer.vscode-eslint (offline)
 * octref.vetur (online) [`vue2`]
-* johnsoncodehk.volar (online) [`vue3`]
+* Vue.volar (online) [`vue3`]
 * svelte.svelte-vscode (online) [`svelte`]
 </details>
 
