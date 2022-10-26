@@ -1,3 +1,5 @@
+## 1.5.1
+* fix:  eslint rule `no-unused-vars` not work in `vue2` `vue3`
 ## 1.5.0
 * update: update dep `eslint`,`vue-eslint-parser`,`eslint-plugin-vue`,
 * update: vscode ext `volar`,change id: `Vue.volar`
