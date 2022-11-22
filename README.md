@@ -1,5 +1,5 @@
 # vscode-eslint-prettier-helper
-一键配置vscode eslint prettier 环境
+自动配置vscode eslint prettier 环境
 
 Automatically configure `Visual Studio Code` eslint + prettier code formatter
 
@@ -17,13 +17,14 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 * vue2 + ts
 * vue3 + ts
 * react(Beta)
+* react + ts(Beta)
 * svelte3
 ## What will do | 它会做什么
 
 <details>
 <summary>Install vscode extensions | 安装vscode扩展</summary>
 
-* dbaeumer.vscode-eslint (offline)
+* dbaeumer.vscode-eslint (offline，version:2.2.3)
 * octref.vetur (online) [`vue2`]
 * Vue.volar (online) [`vue3`]
 * svelte.svelte-vscode (online) [`svelte`]
