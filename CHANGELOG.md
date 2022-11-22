@@ -1,3 +1,5 @@
+## 1.5.2
+* add: `react-ts`
 ## 1.5.1
 * fix:  eslint rule `no-unused-vars` not work in `vue2` `vue3`
 * add: support `react`

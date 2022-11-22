@@ -17,6 +17,7 @@ module.exports = {
     'vue2-ts': 'vue2-ts',
     'vue3-ts': 'vue3-ts',
     'react(Beta)': 'react',
+    'react-ts(Beta)': 'react-ts',
     svelte3: 'svelte3',
   },
   /** type -> vscode extensions */
