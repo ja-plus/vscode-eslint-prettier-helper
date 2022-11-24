@@ -10,16 +10,25 @@ const { readFileSync } = require('fs');
 const myLog = require('./myLog');
 const prompt = inquirer.createPromptModule();
 
+// global install deps?
+const argvs = process.argv.slice(2);
+const isGlobalInstall = argvs.some(arg => ['-g', '--global'].includes(arg));
+
 module.exports = async function ({ type }) {
   let npmCmd = 'npm i -D --legacy-peer-deps';
-  //  --global install?
-  const answer = await prompt({
-    type: 'confirm',
-    name: 'global',
-    message: `npm install --global ?`,
-    default: false,
-  });
-  if (answer.global) npmCmd += ' --global';
+  // #region --global install deps?
+  if (isGlobalInstall) {
+    npmCmd += ' --global';
+  } else {
+    const answer = await prompt({
+      type: 'confirm',
+      name: 'global',
+      message: `npm install --global ?`,
+      default: false,
+    });
+    if (answer.global) npmCmd += ' --global';
+  }
+  // #endregion
 
   const pkgTypes = ['eslint', 'prettier', type];
 
