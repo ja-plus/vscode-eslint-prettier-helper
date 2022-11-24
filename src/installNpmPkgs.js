@@ -12,6 +12,14 @@ const prompt = inquirer.createPromptModule();
 
 module.exports = async function ({ type }) {
   let npmCmd = 'npm i -D --legacy-peer-deps';
+  //  --global install?
+  const answer = await prompt({
+    type: 'confirm',
+    name: 'global',
+    message: `npm install --global ?`,
+    default: false,
+  });
+  if (answer.global) npmCmd += ' --global';
 
   const pkgTypes = ['eslint', 'prettier', type];
 
