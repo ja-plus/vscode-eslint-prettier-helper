@@ -1,3 +1,5 @@
+## 1.5.3
+* update: `vue2-ts`,`vue3-ts` : eslint config remove extends `'@vue/typescript/recommended'`
 ## 1.5.2
 * add: `react-ts` beta
 * add: choose add `--global`
