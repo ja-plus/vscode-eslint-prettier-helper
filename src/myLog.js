@@ -11,7 +11,7 @@ module.exports = {
     console.log(chalk.green('✔ ', ...message));
   },
   danger(...message) {
-    console.log(chalk.red('✘ ', ...message));
+    console.log(chalk.red('✘ ', ...message, 'at: ' + __dirname + __filename));
   },
   warn(...message) {
     console.log(chalk.yellow('● ', ...message));

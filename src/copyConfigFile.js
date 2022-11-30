@@ -6,10 +6,34 @@ const fs = require('fs');
 const chalk = require('chalk');
 const path = require('path');
 const { promisify } = require('util');
-const copyFile = promisify(fs.copyFile);
+const copy = promisify(fs.copyFile);
 const inquirer = require('inquirer');
 const myLog = require('./myLog');
 const prompt = inquirer.createPromptModule();
+
+const packageJson = fs.readFileSync('./package.json', { encoding: 'utf-8' });
+const json = JSON.parse(packageJson);
+/** if the project is ESModule */
+const isESM = json.type === 'module';
+
+/**
+ * @param {string} sourceFileName 原文件名
+ * @param {string} [targetFileName=sourceFileName] 目标文件名
+ * @return {Promise<void>}
+ */
+function copyFile(sourceFileName, targetFileName = sourceFileName) {
+  // if package.json type === module represent the project use ESModule，module.exports replace with export default
+  if (isESM) {
+    let sourceFileText = fs.readFileSync(path.resolve(__dirname, 'configFiles', sourceFileName), { encoding: 'utf-8' });
+    sourceFileText = sourceFileText.replace(/module.exports\s+=/, 'export default');
+    // write file
+    fs.writeFile(targetFileName, sourceFileText, err => {
+      if (err) myLog.danger('Write file error.' + targetFileName, err);
+    });
+    return Promise.resolve();
+  }
+  return copy(sourceFileName, targetFileName);
+}
 
 /**
  * @param {string} sourceFileName 原文件名
@@ -17,7 +41,7 @@ const prompt = inquirer.createPromptModule();
  * @return {Promise<void>}
  */
 function copyFileWrapper(sourceFileName, targetFileName = sourceFileName) {
-  let fileExist = fs.existsSync(targetFileName);
+  const fileExist = fs.existsSync(targetFileName);
   let prom = Promise.resolve();
   if (fileExist) {
     prom = prompt([
@@ -56,6 +80,6 @@ module.exports = async function ({ type }) {
 
     myLog.success('Copying config files succeed');
   } catch (err) {
-    myLog.danger('Copying file err.', err);
+    myLog.danger('Copying file err: ', err);
   }
 };
