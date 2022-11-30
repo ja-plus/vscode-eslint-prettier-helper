@@ -10,10 +10,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['html', 'prettier'],
+  plugins: ['prettier'],
   extends: ['eslint:recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 1,
+    'prefer-const': 1, // 未重新赋值的变量自动转换成const
     // semi: [1, 'always'], // 使用分号结尾
     // 'no-unused-vars': 1,
     // 'no-debugger': 0,
