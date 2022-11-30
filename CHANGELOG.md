@@ -1,3 +1,5 @@
+## 1.6.1
+* fix: Change all config files' suffix: *.js => *.cjs. Config file still use commonjs to export
 ## 1.6.0
 * feature: Change config file commonjs to ESModule, when package.json has `type:"module"`.It's means support vite.
 * remove: `vue2-ts`,`vue3-ts` deps `@vue/eslint-config-typescript': '8.0.0`. Because it's not needed anymore

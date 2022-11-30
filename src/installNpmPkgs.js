@@ -15,7 +15,7 @@ const argvs = process.argv.slice(2);
 const isGlobalInstall = argvs.some(arg => ['-g', '--global'].includes(arg));
 
 module.exports = async function ({ type }) {
-  let npmCmd = 'npm i -D --legacy-peer-deps';
+  let npmCmd = 'npm i -D --legacy-peer-deps --progress=false';
   // #region --global install deps?
   if (isGlobalInstall) {
     npmCmd += ' --global';
@@ -55,17 +55,16 @@ module.exports = async function ({ type }) {
 /** 提示用户是否安装typescript */
 async function checkTypescriptVersion(type) {
   if (type.indexOf('ts') > -1) {
-    myLog.start('Checking typescript...');
     // check user if install the typescript dep
     let tsVersion;
     try {
-      let tsPackageStr = readFileSync('./node_modules/typescript/package.json');
-      let tsPackageJson = JSON.parse(tsPackageStr);
+      const tsPackageStr = readFileSync('./node_modules/typescript/package.json', { encoding: 'utf-8' });
+      const tsPackageJson = JSON.parse(tsPackageStr);
       tsVersion = tsPackageJson.version;
       // const cmdReturn = childProcess.execSync('npm list typescript').toString();
     } catch (e) {
       // -2 not found file or directory
-      if (e.errno != -2) {
+      if (e.errno !== -2) {
         myLog.danger('Can not get typescript info');
       }
     }
