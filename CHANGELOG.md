@@ -1,3 +1,7 @@
+## 1.5.5
+* remove: `vue2-ts`,`vue3-ts` deps `@vue/eslint-config-typescript': '8.0.0`. Because it's not needed anymore
+* remove: delete some useless dependencies in package.json
+* update: `vue2` vscode extension `Vetur` => `Volar`
 ## 1.5.4
 * update: `vue2-ts`,`vue3-ts` : eslint config add extends `'plugin:@typescript-eslint/recommended'`  (support .tsx)
 ## 1.5.3

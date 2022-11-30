@@ -88,8 +88,12 @@ select npm install --global | 将依赖安装在全局
     '@typescript-eslint/parser': '5.32.0',
     '@vue/eslint-config-typescript': '8.0.0',
   },
-  react:{
+  react: {
     'eslint-plugin-react': '7.31.10',
+  },
+  'react-ts': {
+    '@typescript-eslint/eslint-plugin': '5.32.0',
+    '@typescript-eslint/parser': '5.32.0',
   },
   svelte3: {
     'eslint-plugin-svelte': '2.10.0',
@@ -113,12 +117,15 @@ Auto run eslint --fix when save file(*press ctrl + s*) | 保存代码时，自�
 ```
     
 when select `svelte3`
-
 ```json
 "eslint.validate": [
     "javascript",
     "svelte"
 ],
+```
+when select `vue2-ts`,`vue3-ts`
+```json
+  "eslint.validate": ["typescriptreact"], // support tsx
 ```
 </details>
 

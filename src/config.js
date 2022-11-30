@@ -25,20 +25,25 @@ module.exports = {
     eslint: ['eslint'],
     js: [],
     ts: [],
-    vue2: ['vetur'],
+    vue2: ['volar'],
     vue3: ['volar'],
-    'vue2-ts': ['vetur'],
+    'vue2-ts': ['volar'],
     'vue3-ts': ['volar'],
     svelte3: ['svelte'],
   },
   // vscode extensions
   codeExt: {
     eslint: { name: 'dbaeumer.vscode-eslint', validVersion: '2.2.0' },
-    vetur: { name: 'octref.vetur', validVersion: '0.34.1' },
-    volar: { name: 'Vue.volar', validVersion: '0.33.2' },
+    // vetur: { name: 'octref.vetur', validVersion: '0.34.1' },
+    volar: { name: 'Vue.volar', validVersion: '0.40.0' },
     svelte: { name: 'svelte.svelte-vscode', validVersion: '105.10.0' },
   },
-  // ---npm packages
+  /** ---npm packages
+   * jsx: {
+   *   '@babel/core': '7.18.10',
+   *   '@babel/eslint-parser': '7.18.9',
+   * },
+   */
   npmPkgs: {
     eslint: {
       eslint: '8.24.0',
@@ -50,10 +55,6 @@ module.exports = {
       'eslint-plugin-prettier': '4.2.1',
     },
     js: {},
-    jsx: {
-      '@babel/core': '7.18.10',
-      '@babel/eslint-parser': '7.18.9',
-    },
     tsBase: {
       typescript: 'latest',
     },
@@ -74,14 +75,12 @@ module.exports = {
       'eslint-plugin-vue': '9.5.1',
       '@typescript-eslint/eslint-plugin': '5.32.0',
       '@typescript-eslint/parser': '5.32.0',
-      '@vue/eslint-config-typescript': '8.0.0',
     },
     'vue3-ts': {
       'vue-eslint-parser': '9.1.0',
       'eslint-plugin-vue': '9.5.1',
       '@typescript-eslint/eslint-plugin': '5.32.0',
       '@typescript-eslint/parser': '5.32.0',
-      '@vue/eslint-config-typescript': '8.0.0',
     },
     react: {
       'eslint-plugin-react': '7.31.10',
