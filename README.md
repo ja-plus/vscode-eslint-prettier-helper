@@ -25,14 +25,14 @@ select npm install --global | 将依赖安装在全局
 * react(Beta)
 * react + ts(Beta)
 * svelte3
-## What will do | 它会做什么
+## What will it do? | 它会做什么？
 
 <details>
 <summary>Install vscode extensions | 安装vscode扩展</summary>
 
 * dbaeumer.vscode-eslint (offline，version:2.2.3)
-* octref.vetur (online) [`vue2`]
-* Vue.volar (online) [`vue3`]
+* ~~octref.vetur (online) [`vue2`]~~
+* Vue.volar (online) [`vue2`,`vue3`]
 * svelte.svelte-vscode (online) [`svelte`]
 </details>
 
@@ -129,7 +129,7 @@ when select `vue2-ts`,`vue3-ts`
 ```
 </details>
 
-## VS Code 版本和node版本尽量新
+## The VScode version and the node version are as new as possible. | VScode 版本和node版本尽量新
 
 ## ps
 * vscode eslint plugin < 2.2.0 not support eslint@8  
