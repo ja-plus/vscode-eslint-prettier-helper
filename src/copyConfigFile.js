@@ -25,7 +25,7 @@ function copyFileWrapper(sourceFileName, targetFileName = sourceFileName) {
         type: 'confirm',
         name: 'isOverwrite',
         message: `Exist file ${targetFileName}, overwrite files?`,
-        default: true,
+        default: false,
       },
     ]).then(answer => {
       if (answer.isOverwrite) {

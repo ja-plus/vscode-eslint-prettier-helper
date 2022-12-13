@@ -1,3 +1,7 @@
+## 1.6.2
+* delete: `-g` cli param
+* change: overwrite config file default to false.
+* update: `svelte3` dependencies
 ## 1.6.1
 * fix: Change all config files' suffix: *.js => *.cjs. Config file still use commonjs to export
 ## 1.6.0

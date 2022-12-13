@@ -4,17 +4,12 @@
 Automatically configure `Visual Studio Code` eslint + prettier code formatter
 
 ## Usage | 使用方式
-> npx vscode-eslint-prettier-helper [-g] <br>
+> npx vscode-eslint-prettier-helper <br>
 > **or install first**<br>
 > npm i vscode-eslint-prettier-helper<br>
-> npx veph [-g]<br>
+> npx veph<br>
 
-## CLI Args
-| arg | describe |
-| ---- | ---- |
-| -g | npm i `-g` \| 依赖安装到全局 |
-## Suggestion | 建议
-select npm install --global | 将依赖安装在全局
+
 ## Support | 支持环境
 * js
 * ts
@@ -52,6 +47,8 @@ select npm install --global | 将依赖安装在全局
 ```js
   eslint: {
     eslint: '8.24.0',
+  },
+  html:{
     'eslint-plugin-html': '7.1.0',
   },
   prettier: {
@@ -96,8 +93,8 @@ select npm install --global | 将依赖安装在全局
     '@typescript-eslint/parser': '5.32.0',
   },
   svelte3: {
-    'eslint-plugin-svelte': '2.10.0',
-    'prettier-plugin-svelte': '2.7.1',
+    'eslint-plugin-svelte': '2.14.1',
+    'prettier-plugin-svelte': '2.9.0',
   },
 ```
 </details>

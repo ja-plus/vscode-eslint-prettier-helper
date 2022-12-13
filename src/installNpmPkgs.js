@@ -11,26 +11,22 @@ const myLog = require('./myLog');
 const prompt = inquirer.createPromptModule();
 
 // global install deps?
-const argvs = process.argv.slice(2);
-const isGlobalInstall = argvs.some(arg => ['-g', '--global'].includes(arg));
+// const argvs = process.argv.slice(2);
+// let isGlobalInstall = argvs.some(arg => ['-g', '--global'].includes(arg));
 
 module.exports = async function ({ type }) {
   let npmCmd = 'npm i -D --legacy-peer-deps --progress=false';
   // #region --global install deps?
-  if (isGlobalInstall) {
-    npmCmd += ' --global';
-  } else {
-    const answer = await prompt({
-      type: 'confirm',
-      name: 'global',
-      message: `npm install --global ?`,
-      default: false,
-    });
-    if (answer.global) npmCmd += ' --global';
-  }
+  // const answer = await prompt({
+  //   type: 'confirm',
+  //   name: 'global',
+  //   message: `npm install eslint into --global ?`,
+  //   default: false,
+  // });
+  // if (answer.global) isGlobalInstall = true;
   // #endregion
 
-  const pkgTypes = ['eslint', 'prettier', type];
+  const pkgTypes = ['eslint', 'html', 'prettier', type];
 
   if (await checkTypescriptVersion(type)) {
     pkgTypes.push('tsBase'); // 基本ts依赖
@@ -43,8 +39,13 @@ module.exports = async function ({ type }) {
       npmCmd += ' ' + pkg + '@' + version;
     }
   }
-  console.log(npmCmd);
   try {
+    // if (isGlobalInstall) {
+    //   const cmd = 'npm i -D --legacy-peer-deps --progress=false --global eslint@' + npmPkgs.eslint;
+    //   console.log(cmd);
+    //   childProcess.execSync(cmd);
+    // }
+    console.log(npmCmd);
     childProcess.execSync(npmCmd);
     myLog.success('Npm packages installation succeed');
   } catch (err) {

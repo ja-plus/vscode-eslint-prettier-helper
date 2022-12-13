@@ -47,6 +47,8 @@ module.exports = {
   npmPkgs: {
     eslint: {
       eslint: '8.24.0',
+    },
+    html: {
       'eslint-plugin-html': '7.1.0',
     },
     prettier: {
@@ -90,8 +92,8 @@ module.exports = {
       '@typescript-eslint/parser': '5.32.0',
     },
     svelte3: {
-      'eslint-plugin-svelte': '2.10.0',
-      'prettier-plugin-svelte': '2.7.1',
+      'eslint-plugin-svelte': '2.14.1',
+      'prettier-plugin-svelte': '2.9.0',
     },
   },
   // platform - settings.json path
