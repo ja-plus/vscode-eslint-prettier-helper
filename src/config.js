@@ -46,14 +46,14 @@ module.exports = {
    */
   npmPkgs: {
     eslint: {
-      eslint: '8.24.0',
+      eslint: '8.31.0',
     },
     html: {
       'eslint-plugin-html': '7.1.0',
     },
     prettier: {
       prettier: '2.7.1',
-      'eslint-config-prettier': '8.5.0',
+      'eslint-config-prettier': '8.6.0',
       'eslint-plugin-prettier': '4.2.1',
     },
     js: {},
@@ -61,26 +61,26 @@ module.exports = {
       typescript: 'latest',
     },
     ts: {
-      '@typescript-eslint/eslint-plugin': '5.32.0',
-      '@typescript-eslint/parser': '5.32.0',
+      '@typescript-eslint/eslint-plugin': '5.48.0',
+      '@typescript-eslint/parser': '5.48.0',
     },
     vue2: {
       'vue-eslint-parser': '9.1.0',
-      'eslint-plugin-vue': '9.5.1',
+      'eslint-plugin-vue': '9.8.0',
     },
     vue3: {
       'vue-eslint-parser': '9.1.0',
-      'eslint-plugin-vue': '9.5.1',
+      'eslint-plugin-vue': '9.8.0',
     },
     'vue2-ts': {
       'vue-eslint-parser': '9.1.0',
-      'eslint-plugin-vue': '9.5.1',
+      'eslint-plugin-vue': '9.8.0',
       '@typescript-eslint/eslint-plugin': '5.32.0',
       '@typescript-eslint/parser': '5.32.0',
     },
     'vue3-ts': {
       'vue-eslint-parser': '9.1.0',
-      'eslint-plugin-vue': '9.5.1',
+      'eslint-plugin-vue': '9.8.0',
       '@typescript-eslint/eslint-plugin': '5.32.0',
       '@typescript-eslint/parser': '5.32.0',
     },

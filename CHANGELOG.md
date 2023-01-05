@@ -1,5 +1,6 @@
 ## 1.6.3
 * update: eslint.vue3-ts varsIgnorePattern: 'h'
+* update: deps version `ts` `vue` `eslint` `prettier`
 ## 1.6.2
 * delete: `-g` cli param
 * change: overwrite config file default to false.
