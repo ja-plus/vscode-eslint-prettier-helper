@@ -1,4 +1,4 @@
-/** vue3-ts eslint config*/
+/** vue3-jsts eslint config*/
 module.exports = {
   root: true,
   env: {
@@ -14,6 +14,9 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   plugins: ['html', 'vue', 'prettier', '@typescript-eslint'],
   extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
