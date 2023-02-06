@@ -129,11 +129,11 @@ when select `vue2-ts`,`vue3-ts`
 ## The VScode version and the node version are as new as possible. | VScode 版本和node版本尽量新
 
 ## ps
+* You **don't need** to install the `prettier extension` of vscode.
+| **不需要**安装vscode的prettier扩展
+* After modify the prettierrc.js, we need restart eslint  
+| 修改prettierrc.js配置后，请重启eslint 插件使其生效 (Press F1, and select `ESLint: Restart ESLint Server`) 
 * vscode eslint plugin < 2.2.0 not support eslint@8  
 | vscode eslint插件版本< 2.2.0 则不支持eslint@8
 * If it not work in vue-cli@4, Try `npm remove @vue/cli-plugin-eslint babel-eslint`, and remove eslint config in `package.json` if exist.  
 | 如果在vue-cli中不生效，则尝试移除`@vue/cli-plugin-eslint babel-eslint`。package.json中，如有eslint配置，请删除。
-* Needn't install vscode `prettier extension`  
-| 不需要安装vscode的prettier扩展
-* After modify the prettierrc.js, we need restart eslint  
-| 修改prettierrc.js配置后，请重启eslint 插件使其生效 (Press F1, and select `ESLint: Restart ESLint Server`) 
