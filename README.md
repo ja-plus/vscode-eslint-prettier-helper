@@ -1,7 +1,6 @@
 # vscode-eslint-prettier-helper
-自动配置vscode eslint prettier 环境
-
 Automatically configure `Visual Studio Code` eslint + prettier code formatter
+| 自动配置vscode eslint prettier 环境
 
 ## Usage | 使用方式
 > npx vscode-eslint-prettier-helper <br>
@@ -20,6 +19,7 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 * react(Beta)
 * react + ts(Beta)
 * svelte3
+* svelte3-ts
 ## What will it do? | 它会做什么？
 
 <details>
@@ -34,9 +34,9 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 <details>
 <summary>Add config files | 添加配置文件</summary>
 
-* .eslintrc.js 
+* .eslintrc.cjs 
 * .eslintignore 
-* .prettier.js
+* .prettier.cjs
 * .prettierignore
 * jsconfig.json [`vue2`, `vue3`] //  This file make vscode recognize '@' alias 
 </details>
@@ -45,57 +45,62 @@ Automatically configure `Visual Studio Code` eslint + prettier code formatter
 <summary>Npm install eslint prettier packages | 安装eslint prettier npm依赖</summary>
 
 ```js
-  eslint: {
-    eslint: '8.24.0',
-  },
-  html:{
-    'eslint-plugin-html': '7.1.0',
-  },
-  prettier: {
-    prettier: '2.7.1',
-    'eslint-config-prettier': '8.5.0',
-    'eslint-plugin-prettier': '4.2.1',
-  },
-  tsBase: {
-    typescript: 'latest',
-  },
-  ts: {
-    '@typescript-eslint/eslint-plugin': '5.32.0',
-    '@typescript-eslint/parser': '5.32.0',
-  },
-  vue2: {
-    'vue-eslint-parser': '9.1.0',
-    'eslint-plugin-vue': '9.5.1',
-  },
-  vue3: {
-    'vue-eslint-parser': '9.1.0',
-    'eslint-plugin-vue': '9.5.1',
-  },
-  'vue2-ts': {
-    'vue-eslint-parser': '9.1.0',
-    'eslint-plugin-vue': '9.5.1',
-    '@typescript-eslint/eslint-plugin': '5.32.0',
-    '@typescript-eslint/parser': '5.32.0',
-    '@vue/eslint-config-typescript': '8.0.0',
-  },
-  'vue3-ts': {
-    'vue-eslint-parser': '9.1.0',
-    'eslint-plugin-vue': '9.5.1',
-    '@typescript-eslint/eslint-plugin': '5.32.0',
-    '@typescript-eslint/parser': '5.32.0',
-    '@vue/eslint-config-typescript': '8.0.0',
-  },
-  react: {
-    'eslint-plugin-react': '7.31.10',
-  },
-  'react-ts': {
-    '@typescript-eslint/eslint-plugin': '5.32.0',
-    '@typescript-eslint/parser': '5.32.0',
-  },
-  svelte3: {
-    'eslint-plugin-svelte': '2.14.1',
-    'prettier-plugin-svelte': '2.9.0',
-  },
+eslint: {
+  eslint: '8.37.0',
+},
+html: {
+  'eslint-plugin-html': '7.1.0',
+},
+prettier: {
+  prettier: '2.8.7',
+  'eslint-config-prettier': '8.8.0',
+  'eslint-plugin-prettier': '4.2.1',
+},
+js: {},
+tsBase: {
+  typescript: 'latest',
+},
+ts: {
+  '@typescript-eslint/eslint-plugin': '5.57.1',
+  '@typescript-eslint/parser': '5.57.1',
+},
+vue2: {
+  'vue-eslint-parser': '9.1.0',
+  'eslint-plugin-vue': '9.8.0',
+},
+vue3: {
+  'vue-eslint-parser': '9.1.0',
+  'eslint-plugin-vue': '9.8.0',
+},
+'vue2-ts': {
+  'vue-eslint-parser': '9.1.0',
+  'eslint-plugin-vue': '9.8.0',
+  '@typescript-eslint/eslint-plugin': '5.57.1',
+  '@typescript-eslint/parser': '5.57.1',
+},
+'vue3-ts': {
+  'vue-eslint-parser': '9.1.0',
+  'eslint-plugin-vue': '9.8.0',
+  '@typescript-eslint/eslint-plugin': '5.57.1',
+  '@typescript-eslint/parser': '5.57.1',
+},
+react: {
+  'eslint-plugin-react': '7.31.10',
+},
+'react-ts': {
+  '@typescript-eslint/eslint-plugin': '5.57.1',
+  '@typescript-eslint/parser': '5.57.1',
+},
+svelte3: {
+  'eslint-plugin-svelte': '2.25.0',
+  'prettier-plugin-svelte': '2.10.0',
+},
+'svelte3-ts': {
+  'eslint-plugin-svelte': '2.25.0',
+  'prettier-plugin-svelte': '2.10.0',
+  '@typescript-eslint/parser': '5.57.1',
+  'svelte-eslint-parser': '0.24.2',
+},
 ```
 </details>
 
@@ -113,17 +118,18 @@ Auto run eslint --fix when save file(*press ctrl + s*) | 保存代码时，自�
 }
 ```
     
-when select `svelte3`
+when select `vue2-ts`,`vue3-ts`
+```json
+"eslint.validate": ["typescriptreact"], // support tsx
+```
+
+when select `svelte3`,`svelte3-ts`
 ```json
 "eslint.validate": [
-    "javascript",
     "svelte"
 ],
 ```
-when select `vue2-ts`,`vue3-ts`
-```json
-  "eslint.validate": ["typescriptreact"], // support tsx
-```
+
 </details>
 
 ## The VScode version and the node version are as new as possible. | VScode 版本和node版本尽量新

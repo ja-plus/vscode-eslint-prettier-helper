@@ -1,3 +1,6 @@
+## 1.7.0
+* add: `svelte-ts`
+* update: upgrade dependencies
 ## 1.6.4
 * add: `parserOptions.ecmaFeatures.jsx` = true to eslint config to support jsx in `.vue` SFC(lang='tsx').`vue2-ts`,`vut3-ts`,
 ## 1.6.3

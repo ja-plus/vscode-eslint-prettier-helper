@@ -19,6 +19,7 @@ module.exports = {
     'react(Beta)': 'react',
     'react-ts(Beta)': 'react-ts',
     svelte3: 'svelte3',
+    'svelte3-ts': 'svelte3-ts',
   },
   /** type -> vscode extensions */
   typeExtMapper: {
@@ -30,6 +31,7 @@ module.exports = {
     'vue2-ts': ['volar'],
     'vue3-ts': ['volar'],
     svelte3: ['svelte'],
+    'svelte3-ts': ['svelte'],
   },
   // vscode extensions
   codeExt: {
@@ -46,14 +48,14 @@ module.exports = {
    */
   npmPkgs: {
     eslint: {
-      eslint: '8.31.0',
+      eslint: '8.37.0',
     },
     html: {
       'eslint-plugin-html': '7.1.0',
     },
     prettier: {
-      prettier: '2.7.1',
-      'eslint-config-prettier': '8.6.0',
+      prettier: '2.8.7',
+      'eslint-config-prettier': '8.8.0',
       'eslint-plugin-prettier': '4.2.1',
     },
     js: {},
@@ -61,8 +63,8 @@ module.exports = {
       typescript: 'latest',
     },
     ts: {
-      '@typescript-eslint/eslint-plugin': '5.48.0',
-      '@typescript-eslint/parser': '5.48.0',
+      '@typescript-eslint/eslint-plugin': '5.57.1',
+      '@typescript-eslint/parser': '5.57.1',
     },
     vue2: {
       'vue-eslint-parser': '9.1.0',
@@ -75,25 +77,31 @@ module.exports = {
     'vue2-ts': {
       'vue-eslint-parser': '9.1.0',
       'eslint-plugin-vue': '9.8.0',
-      '@typescript-eslint/eslint-plugin': '5.32.0',
-      '@typescript-eslint/parser': '5.32.0',
+      '@typescript-eslint/eslint-plugin': '5.57.1',
+      '@typescript-eslint/parser': '5.57.1',
     },
     'vue3-ts': {
       'vue-eslint-parser': '9.1.0',
       'eslint-plugin-vue': '9.8.0',
-      '@typescript-eslint/eslint-plugin': '5.32.0',
-      '@typescript-eslint/parser': '5.32.0',
+      '@typescript-eslint/eslint-plugin': '5.57.1',
+      '@typescript-eslint/parser': '5.57.1',
     },
     react: {
       'eslint-plugin-react': '7.31.10',
     },
     'react-ts': {
-      '@typescript-eslint/eslint-plugin': '5.32.0',
-      '@typescript-eslint/parser': '5.32.0',
+      '@typescript-eslint/eslint-plugin': '5.57.1',
+      '@typescript-eslint/parser': '5.57.1',
     },
     svelte3: {
-      'eslint-plugin-svelte': '2.14.1',
-      'prettier-plugin-svelte': '2.9.0',
+      'eslint-plugin-svelte': '2.25.0',
+      'prettier-plugin-svelte': '2.10.0',
+    },
+    'svelte3-ts': {
+      'eslint-plugin-svelte': '2.25.0',
+      'prettier-plugin-svelte': '2.10.0',
+      '@typescript-eslint/parser': '5.57.1',
+      'svelte-eslint-parser': '0.24.2',
     },
   },
   // platform - settings.json path
@@ -116,7 +124,10 @@ module.exports = {
       'eslint.validate': ['typescriptreact'], // support tsx
     },
     svelte3: {
-      'eslint.validate': ['javascript', 'svelte'],
+      'eslint.validate': ['svelte'],
+    },
+    'svelte3-ts': {
+      'eslint.validate': ['svelte'],
     },
   },
 };
