@@ -17,7 +17,7 @@ module.exports = {
     },
   },
   plugins: ['html', 'vue', 'prettier', '@typescript-eslint'],
-  extends: ['eslint:recommended', 'plugin:vue/recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  extends: ['plugin:@typescript-eslint/recommended', 'plugin:vue/recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 1,
     'vue/multi-word-component-names': 1, // 组件名称多个字符，更改为1警告

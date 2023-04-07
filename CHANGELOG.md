@@ -1,3 +1,5 @@
+## 1.7.1
+* update: remove `eslint:recommend` in `eslint` config when select ts. Resolve the 'undef' error when use then type declare in d.ts file,
 ## 1.7.0
 * add: `svelte-ts`
 * update: upgrade dependencies
