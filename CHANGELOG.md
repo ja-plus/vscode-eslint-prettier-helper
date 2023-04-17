@@ -1,5 +1,5 @@
 ## 1.7.1
-* update: remove `eslint:recommend` in `eslint` config when select ts. Resolve the 'undef' error when use then type declare in d.ts file,
+* update: remove `eslint:recommend` in `eslint` config when select ts. Resolve the 'undef' error when use the type declared in d.ts file,
 * update: remove unnecessary plugins config in eslint.config files
 ## 1.7.0
 * add: `svelte-ts`

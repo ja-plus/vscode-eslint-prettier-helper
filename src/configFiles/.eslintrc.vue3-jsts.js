@@ -9,7 +9,7 @@ module.exports = {
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: {
-      js: '@babel/eslint-parser',
+      js: 'espree',
       ts: '@typescript-eslint/parser',
     },
     ecmaVersion: 'latest',

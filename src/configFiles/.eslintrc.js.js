@@ -1,6 +1,6 @@
 /** default js eslint config */
 module.exports = {
-  root: true,
+  root: true, // ESLint 一旦发现配置文件中有 "root": true，它就会停止在父级目录中寻找。
   env: {
     browser: true,
     es2021: true,
