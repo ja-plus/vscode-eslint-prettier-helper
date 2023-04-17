@@ -18,8 +18,8 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['html', 'vue', 'prettier', '@typescript-eslint'],
-  extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+  plugins: ['html'],
+  extends: ['plugin:vue/vue3-recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 1,
     '@typescript-eslint/no-empty-function': 1, // 不能有空方法，改为1警告

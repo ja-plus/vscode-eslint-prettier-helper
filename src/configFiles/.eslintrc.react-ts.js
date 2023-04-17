@@ -14,7 +14,7 @@ module.exports = {
     },
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['html', '@typescript-eslint', 'prettier'],
+  plugins: ['html'],
   extends: [
     'plugin:react/recommended',
     // 'plugin:@typescript-eslint/recommended',

@@ -14,7 +14,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: ['html', 'vue', 'prettier'],
+  plugins: ['html'],
   extends: ['eslint:recommended', 'plugin:vue/vue3-recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 1,

@@ -16,7 +16,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['html', 'prettier'],
+  plugins: ['html'],
   extends: ['eslint:recommended', 'plugin:svelte/recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 1,

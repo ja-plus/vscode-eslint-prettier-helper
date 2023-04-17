@@ -18,7 +18,7 @@ module.exports = {
     extraFileExtensions: ['.svelte'],
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['html', 'prettier'],
+  plugins: ['html'],
   extends: ['plugin:svelte/recommended', 'plugin:prettier/recommended'],
   overrides: [
     {
