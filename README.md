@@ -105,12 +105,11 @@ svelte3: {
 </details>
 
 <details>
-<summary>Update vscode settings.json | 更新vscode setting.json配置</summary>
+<summary>Auto format the code when save it(<b>press ctrl + s</b>) | 保存代码时，自动格式化代码</summary>
 
 * Windows: ${userHomeDir}/AppData/Roaming/Code/User/settings.json
 * Linux: ${userHomeDir}/.config/Code/User/settings.json
-
-Auto run eslint --fix when save file(*press ctrl + s*) | 保存代码时，自动格式化代码
+Update vscode settings.json | 更新vscode setting.json配置
 
 ```json
 "editor.codeActionsOnSave": {

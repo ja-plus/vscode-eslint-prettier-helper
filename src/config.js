@@ -48,13 +48,13 @@ module.exports = {
    */
   npmPkgs: {
     eslint: {
-      eslint: '8.37.0',
+      eslint: '8.44.0',
     },
     html: {
       'eslint-plugin-html': '7.1.0',
     },
     prettier: {
-      prettier: '2.8.7',
+      prettier: '2.8.8',
       'eslint-config-prettier': '8.8.0',
       'eslint-plugin-prettier': '4.2.1',
     },
@@ -63,8 +63,8 @@ module.exports = {
       typescript: 'latest',
     },
     ts: {
-      '@typescript-eslint/eslint-plugin': '5.57.1',
-      '@typescript-eslint/parser': '5.57.1',
+      '@typescript-eslint/eslint-plugin': '5.62.0',
+      '@typescript-eslint/parser': '5.62.0',
     },
     vue2: {
       'vue-eslint-parser': '9.1.0',
@@ -98,10 +98,10 @@ module.exports = {
       'prettier-plugin-svelte': '2.10.0',
     },
     'svelte3-ts': {
-      'eslint-plugin-svelte': '2.25.0',
-      'prettier-plugin-svelte': '2.10.0',
-      '@typescript-eslint/parser': '5.57.1',
-      'svelte-eslint-parser': '0.24.2',
+      'eslint-plugin-svelte': '2.32.2',
+      'prettier-plugin-svelte': '2.10.1',
+      '@typescript-eslint/parser': '5.62.0',
+      'svelte-eslint-parser': '0.32.1',
     },
   },
   // platform - settings.json path

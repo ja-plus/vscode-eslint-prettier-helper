@@ -1,3 +1,5 @@
+## 1.7.2
+* update: dependencies
 ## 1.7.1
 * update: remove `eslint:recommend` in `eslint` config when select ts. Resolve the 'undef' error when use the type declared in d.ts file,
 * update: remove unnecessary plugins config in eslint.config files
