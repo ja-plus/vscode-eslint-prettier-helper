@@ -1,3 +1,5 @@
+## 1.7.3
+* update: `svelte3-ts` config
 ## 1.7.2
 * update: dependencies
 ## 1.7.1

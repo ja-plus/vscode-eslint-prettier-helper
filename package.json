@@ -1,6 +1,6 @@
 {
   "name": "vscode-eslint-prettier-helper",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "Auto set eslint prettier in vscode | 自动配置vscode eslint prettier环境",
   "keywords": [
     "vscode",
@@ -27,10 +27,10 @@
     "vscode-eslint-prettier-helper": "./src/main.js",
     "veph": "./src/main.js"
   },
-  "author": "JA+",
+  "author": "japlus",
   "contributors": [
     {
-      "name": "JA+"
+      "name": "japlus"
     }
   ],
   "license": "MIT",
