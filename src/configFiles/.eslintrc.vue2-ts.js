@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     'prettier/prettier': 1,
     'vue/multi-word-component-names': 1, // 组件名称多个字符，更改为1警告
+    '@typescript-eslint/no-inferrable-types': 1, // let a:string = 's'; 提示去掉类型声明。改为警告
     '@typescript-eslint/no-empty-function': 1, // 不能有空方法，改为1警告
     '@typescript-eslint/no-var-requires': 0, // 解决vue.config.js中require语法的报错
     '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: 'h' }], // 用于取消tsx,jsx 渲染函数render(h) 中提示形参h未使用的问题

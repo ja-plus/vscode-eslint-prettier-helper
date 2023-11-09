@@ -19,6 +19,7 @@ module.exports = {
   extends: ['plugin:@typescript-eslint/recommended', 'plugin:vue/vue3-recommended', 'plugin:prettier/recommended'],
   rules: {
     'prettier/prettier': 1,
+    '@typescript-eslint/no-inferrable-types': 1, // let a:string = 's'; 提示去掉类型声明
     '@typescript-eslint/no-empty-function': 1, // 不能有空方法，改为1警告
     '@typescript-eslint/no-var-requires': 0, // 解决vue.config.js中require语法的报错
     '@typescript-eslint/no-unused-vars': [1, { varsIgnorePattern: 'h' }], // 用于取消tsx,jsx import { h } from 'vue 中提示h函数未使用的问题
