@@ -1,5 +1,6 @@
-## 1.7.
+## 1.7.4
 * add： `'@typescript-eslint/no-inferrable-types': 1,` in vue-ts file
+* upgrade: dependencies
 ## 1.7.3
 * update: `svelte3-ts` config
 ## 1.7.2
