@@ -1,3 +1,5 @@
+## 1.8.0
+* upgrade: dependencies. upgrade `prettier@3` 
 ## 1.7.4
 * add： `'@typescript-eslint/no-inferrable-types': 1,` in vue-ts file
 * upgrade: dependencies

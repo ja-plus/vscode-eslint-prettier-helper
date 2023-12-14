@@ -54,17 +54,17 @@ module.exports = {
       'eslint-plugin-html': '7.1.0',
     },
     prettier: {
-      prettier: '2.8.8',
+      prettier: '3.1.1',
       'eslint-config-prettier': '8.10.0',
-      'eslint-plugin-prettier': '4.2.1',
+      'eslint-plugin-prettier': '5.0.1',
     },
     js: {},
     tsBase: {
       typescript: 'latest',
     },
     ts: {
-      '@typescript-eslint/eslint-plugin': '5.62.0',
-      '@typescript-eslint/parser': '5.62.0',
+      '@typescript-eslint/eslint-plugin': '6.14.0',
+      '@typescript-eslint/parser': '6.14.0',
     },
     vue2: {
       'vue-eslint-parser': '9.3.2',
@@ -77,31 +77,31 @@ module.exports = {
     'vue2-ts': {
       'vue-eslint-parser': '9.3.2',
       'eslint-plugin-vue': '9.19.2',
-      '@typescript-eslint/eslint-plugin': '5.62.0',
-      '@typescript-eslint/parser': '5.62.0',
+      '@typescript-eslint/eslint-plugin': '6.14.0',
+      '@typescript-eslint/parser': '6.14.0',
     },
     'vue3-ts': {
       'vue-eslint-parser': '9.3.2',
       'eslint-plugin-vue': '9.19.2',
-      '@typescript-eslint/eslint-plugin': '5.62.0',
-      '@typescript-eslint/parser': '5.62.0',
+      '@typescript-eslint/eslint-plugin': '6.14.0',
+      '@typescript-eslint/parser': '6.14.0',
     },
     react: {
-      'eslint-plugin-react': '7.31.10',
+      'eslint-plugin-react': '7.33.2',
     },
     'react-ts': {
-      '@typescript-eslint/eslint-plugin': '5.62.0',
-      '@typescript-eslint/parser': '5.62.0',
+      '@typescript-eslint/eslint-plugin': '6.14.0',
+      '@typescript-eslint/parser': '6.14.0',
     },
     svelte3: {
-      'eslint-plugin-svelte': '2.25.0',
-      'prettier-plugin-svelte': '2.10.0',
+      'eslint-plugin-svelte': '2.35.1',
+      'prettier-plugin-svelte': '3.1.2',
     },
     'svelte3-ts': {
-      'eslint-plugin-svelte': '2.32.2',
-      'prettier-plugin-svelte': '2.10.1',
-      '@typescript-eslint/parser': '5.62.0',
-      'svelte-eslint-parser': '0.32.1',
+      'eslint-plugin-svelte': '2.35.1',
+      'prettier-plugin-svelte': '3.1.2',
+      '@typescript-eslint/parser': '6.14.0',
+      'svelte-eslint-parser': '0.33.1',
     },
   },
   // platform - settings.json path
