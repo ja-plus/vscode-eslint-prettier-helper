@@ -1,3 +1,6 @@
+## 1.8.1
+* upgrade: dependencies.
+
 ## 1.8.0
 * upgrade: dependencies. upgrade `prettier@3` 
 ## 1.7.4

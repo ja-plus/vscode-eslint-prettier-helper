@@ -15,7 +15,7 @@ const platform = os.platform();
  * @param {object} settingJson
  */
 function updateSettings(type, settingJson) {
-  let settingCfg = settingConfig[type];
+  const settingCfg = settingConfig[type];
   if (!settingCfg) return;
 
   for (const key in settingCfg) {

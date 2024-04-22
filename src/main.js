@@ -14,7 +14,7 @@ const prompt = inquirer.createPromptModule();
 let vscodeVersion = childProcess.execSync('code --version').toString();
 vscodeVersion = vscodeVersion.split('\n')[0];
 
-let promptParams = [];
+const promptParams = [];
 console.log('version:', chalk.green(pkg.version));
 // Check vscode version
 if (vscodeVersion < minCodeVersion) {
@@ -55,9 +55,7 @@ prompt(promptParams).then(async answer => {
     await require('./installNpmPkgs.js')(answer);
 
     myLog.success('All task done. Please restart vscode( / Restart eslint plugin / Reload require). Make effective eslint.');
-    myLog.tip(
-      'Did not come into effect? Make sure the folder that vscode opened, which has the config file and node_modules in root directory.',
-    );
+    myLog.tip('Did not come into effect? Make sure the folder that vscode opened, which has the config file and node_modules in root directory.');
   } catch (err) {
     myLog.danger(err);
   }
