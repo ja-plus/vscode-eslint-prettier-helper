@@ -1,4 +1,8 @@
-## 1.8.1
+## 1.8.2
+* revert: config.js
+* upgrade: dependencies.
+
+## 1.8.1 deprecated
 * upgrade: dependencies.
 
 ## 1.8.0

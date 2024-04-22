@@ -1,6 +1,6 @@
 {
   "name": "vscode-eslint-prettier-helper",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "Auto set eslint prettier in vscode | 自动配置vscode eslint prettier环境",
   "keywords": [
     "vscode",
