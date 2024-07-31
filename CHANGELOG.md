@@ -1,9 +1,11 @@
-## 1.8.3
+## 1.8.4
+* ts: @typescript-eslint/no-explicit-any: 1
+* upgrade: dependencies.
 
+## 1.8.3
 * update:  '@typescript-eslint/no-unused-vars': [1, { varsIgnorePattern: '^h$' }]
 
 ## 1.8.2
-
 * revert: config.js
 * upgrade: dependencies.
 

@@ -51,20 +51,20 @@ module.exports = {
       eslint: '8.57.0',
     },
     html: {
-      'eslint-plugin-html': '8.1.0',
+      'eslint-plugin-html': '8.1.1',
     },
     prettier: {
-      prettier: '3.2.5',
+      prettier: '3.3.3',
       'eslint-config-prettier': '9.1.0',
-      'eslint-plugin-prettier': '5.1.3',
+      'eslint-plugin-prettier': '5.2.1',
     },
     js: {},
     tsBase: {
       typescript: 'latest',
     },
     ts: {
-      '@typescript-eslint/eslint-plugin': '7.7.0',
-      '@typescript-eslint/parser': '7.7.0',
+      '@typescript-eslint/eslint-plugin': '7.18.0',
+      '@typescript-eslint/parser': '7.18.0',
     },
     vue2: {
       'vue-eslint-parser': '9.4.2',
@@ -77,21 +77,21 @@ module.exports = {
     'vue2-ts': {
       'vue-eslint-parser': '9.4.2',
       'eslint-plugin-vue': '9.25.0',
-      '@typescript-eslint/eslint-plugin': '7.7.0',
-      '@typescript-eslint/parser': '7.7.0',
+      '@typescript-eslint/eslint-plugin': '7.18.0',
+      '@typescript-eslint/parser': '7.18.0',
     },
     'vue3-ts': {
       'vue-eslint-parser': '9.4.2',
       'eslint-plugin-vue': '9.25.0',
-      '@typescript-eslint/eslint-plugin': '7.7.0',
-      '@typescript-eslint/parser': '7.7.0',
+      '@typescript-eslint/eslint-plugin': '7.18.0',
+      '@typescript-eslint/parser': '7.18.0',
     },
     react: {
       'eslint-plugin-react': '7.34.1',
     },
     'react-ts': {
-      '@typescript-eslint/eslint-plugin': '7.7.0',
-      '@typescript-eslint/parser': '7.7.0',
+      '@typescript-eslint/eslint-plugin': '7.18.0',
+      '@typescript-eslint/parser': '7.18.0',
     },
     svelte3: {
       'eslint-plugin-svelte': '2.37.0',
@@ -100,7 +100,7 @@ module.exports = {
     'svelte3-ts': {
       'eslint-plugin-svelte': '2.37.0',
       'prettier-plugin-svelte': '3.2.3',
-      '@typescript-eslint/parser': '7.7.0',
+      '@typescript-eslint/parser': '7.18.0',
       'svelte-eslint-parser': '0.34.1',
     },
   },

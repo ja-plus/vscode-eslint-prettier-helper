@@ -23,5 +23,6 @@ module.exports = {
     // 'no-console': 0,
     'no-new-object': 1, // 使用字面量创建对象 非new Object()
     'object-shorthand': 1, // 对象方法属性值缩写
+    '@typescript-eslint/no-explicit-any': 1, // 禁止使用any
   },
 };
