@@ -1,3 +1,6 @@
+## 1.8.5
+* vue: set 'vue/v-on-event-hyphenation': 0. prevent camelCase vOn be modified
+
 ## 1.8.4
 * ts: @typescript-eslint/no-explicit-any: 1
 * upgrade: dependencies.
