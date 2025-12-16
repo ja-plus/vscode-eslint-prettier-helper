@@ -7,6 +7,7 @@ const path = require('path');
 const fs = require('fs');
 const { typeExtMapper, codeExt } = require('./config');
 const myLog = require('./myLog');
+const { versionCompare } = require('./utils');
 
 const extFileNames = fs.readdirSync(path.resolve(__dirname, './vscodeExts'));
 
@@ -44,7 +45,7 @@ function checkExtension(type) {
     if (installedExt) {
       const installedExtVersion = installedExt.split('@')[1];
       // check installed extension's version
-      if (installedExtVersion < codeExtItem.validVersion) {
+      if (versionCompare(installedExtVersion, codeExtItem.validVersion) < 0) {
         myLog.warn(`Installed plugin version is too early(${installedExt})`);
         installVscodeExtension(codeExtItem.name);
       } else {

@@ -9,6 +9,7 @@ const chalk = require('chalk');
 const inquirer = require('inquirer');
 const { promptChoices, minCodeVersion } = require('./config.js');
 const myLog = require('./myLog');
+const { versionCompare } = require('./utils.js');
 const prompt = inquirer.createPromptModule();
 
 let vscodeVersion = childProcess.execSync('code --version').toString();
@@ -17,7 +18,8 @@ vscodeVersion = vscodeVersion.split('\n')[0];
 const promptParams = [];
 console.log('version:', chalk.green(pkg.version));
 // Check vscode version
-if (vscodeVersion < minCodeVersion) {
+const isValidVersion = versionCompare(vscodeVersion, minCodeVersion) >= 0;
+if (!isValidVersion) {
   promptParams.push({
     type: 'confirm',
     name: 'invalidVersion',

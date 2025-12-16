@@ -113,15 +113,16 @@ module.exports = {
   settingConfig: {
     default: {
       'editor.codeActionsOnSave': {
-        'source.fixAll.eslint': true,
+        'source.fixAll.eslint': 'explicit',
       },
+      'eslint.probe': ['javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue', 'svelte'],
     },
     ts: {},
     'vue2-ts': {
-      'eslint.validate': ['typescriptreact'], // support tsx
+      'eslint.validate': ['typescriptreact', 'typescript', 'vue', 'javascript', 'javascriptreact'], // support tsx
     },
     'vue3-ts': {
-      'eslint.validate': ['typescriptreact'], // support tsx
+      'eslint.validate': ['typescriptreact', 'typescript', 'vue', 'javascript', 'javascriptreact'], // support tsx
     },
     svelte3: {
       'eslint.validate': ['svelte'],

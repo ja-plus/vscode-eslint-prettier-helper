@@ -1,3 +1,7 @@
+## 1.9.0
+* Add: vscode setting.json `eslint.probe: ['javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue', 'svelte']`
+* Change: vscode setting.json `source.fixAll.eslint`: true to `explicit`
+
 ## 1.8.5
 * vue: set 'vue/v-on-event-hyphenation': 0. prevent camelCase vOn be modified
 
