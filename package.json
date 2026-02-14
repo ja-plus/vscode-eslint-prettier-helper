@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/japlus/vscode-eslint-prettier-helper"
+    "url": "https://github.com/ja-plus/vscode-eslint-prettier-helper"
   },
   "scripts": {
     "start": "node src/main.js"
