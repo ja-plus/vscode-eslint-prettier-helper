@@ -108,6 +108,7 @@ module.exports = {
   settingFilePath: {
     win32: 'AppData/Roaming/Code/User/settings.json',
     linux: '.config/Code/User/settings.json',
+    darwin: 'Library/Application Support/Code/User/settings.json',
   },
   // setting.json config
   settingConfig: {
